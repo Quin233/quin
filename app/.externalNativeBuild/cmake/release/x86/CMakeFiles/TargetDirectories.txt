@@ -1,0 +1,3 @@
+/home/schrondinger/AndroidStudioProjects/Quin/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir
+/home/schrondinger/AndroidStudioProjects/Quin/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir
+/home/schrondinger/AndroidStudioProjects/Quin/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/native-lib.dir
