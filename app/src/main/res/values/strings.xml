@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">Quin</string>
+    <!-- 全局以及Splash、Welcome -->
+    <string name="app_name">QUIN</string>
+    <string name="use_it_now">立即使用</string>
+    <string name="open_permissions">开启QUIN</string>
+    <string name="open_permissions_detail">为了您能正常使用QUIN应用,需要以下信息</string>
+    <string name="storage_permissions">存储空间</string>
+    <string name="device_info_permissions">设备信息</string>
+    <string name="location_info_permissions">位置信息</string>
+    <string name="next_step">下一步</string>
+
+    <!-- 登陆 -->
+    <string name="login_username">请输入手机号</string>
+    <string name="login_psaaword">请输入密码</string>
+    <string name="login_login">登  陆</string>
+    <string name="login_register">注  册</string>
+    <string name="login_self">下次自动登陆</string>
+    <string name="login_forget_password">忘记密码</string>
+    <string name="login_find_username">找回用户名</string>
+
+    <!-- 注册 -->
+    <string name="register_country">国家地区</string>
+    <string name="register_phone">手机号</string>
+    <string name="register_assent_protocol">同意协议并注册</string>
+    <string name="register_pwd">密码</string>
+    <string name="register_pwd_hint">请输入密码</string>
+    <string name="register_pwd_hint_d">请再次输入密码</string>
+    <string name="register_country_list">国家和地区列表</string>
+    <string name="register_result">注册结果</string>
+    <string name="register_complete">完成</string>
+    <string name="register_result_content">注册成功，赶紧登录吧!</string>
+
+    <!-- 简单名词 -->
+    <string name="home">首页</string>
+
+
+    <!-- dialog -->
+    <string name="head_select">头像选择</string>
+    <string name="camera">头像选择</string>
+    <string name="picture">头像选择</string>
+    <string name="cancel">取消</string>
 </resources>
