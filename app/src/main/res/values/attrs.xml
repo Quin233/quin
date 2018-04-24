@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownView">
+        <attr name="background_color" format="color" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+    </declare-styleable>
+
+    <!--圆形图标-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width_cv" format="dimension" />
+        <attr name="border_color_cv" format="color" />
+    </declare-styleable>
+
+    <!--缩放旋转图片-->
+    <declare-styleable name="TouchImageView">
+        <attr name="image_src" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="HorizontalInfiniteCycleViewPager">
+        <attr name="icvp_min_page_scale_offset"/>
+        <attr name="icvp_center_page_scale_offset"/>
+        <attr name="icvp_min_page_scale"/>
+        <attr name="icvp_max_page_scale"/>
+        <attr name="icvp_medium_scaled"/>
+        <attr name="icvp_scroll_duration"/>
+        <attr name="icvp_page_duration"/>
+        <attr name="icvp_interpolator"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveSideBarView">
+        <attr name="sidebarTextColor" format="color|reference"/>
+        <attr name="sidebarBackgroundColor" format="color|reference"/>
+        <attr name="sidebarChooseTextColor" format="color|reference"/>
+        <attr name="sidebarTextSize" format="dimension"/>
+        <attr name="sidebarLargeTextSize" format="dimension"/>
+        <attr name="sidebarRadius" format="dimension"/>
+        <attr name="sidebarBallRadius" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="icvp_min_page_scale_offset" format="dimension"/>
+    <attr name="icvp_center_page_scale_offset" format="dimension"/>
+    <attr name="icvp_min_page_scale" format="float"/>
+    <attr name="icvp_max_page_scale" format="float"/>
+    <attr name="icvp_medium_scaled" format="boolean"/>
+    <attr name="icvp_scroll_duration" format="integer"/>
+    <attr name="icvp_page_duration" format="integer"/>
+    <attr name="icvp_interpolator" format="reference"/>
+
+</resources>

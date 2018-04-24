@@ -1,11 +1,52 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
 
+    <!-- DrawerArrowStyle -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <!-- ToolBarArrowStyle -->
+    <style name="toolBarWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <declare-styleable name="GifView">
+        <!--gif文件引用-->
+        <attr name="gif" format="reference"  />
+        <!--是否加载完自动播放-->
+        <attr name="paused" format="boolean"  />
+        <!--是否加载完自动播放-->
+        <!--播放次放，默认永远播放-->
+        <attr name="playCount" format="integer"  />
+    </declare-styleable>
+
+    <!-- 自定义的dialog样式 -->
+    <style name="Theme_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 登陆页面EditText样式 -->
+    <style name="LoginEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
 </resources>
