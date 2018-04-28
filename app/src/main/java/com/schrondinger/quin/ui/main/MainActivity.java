@@ -22,6 +22,7 @@ import com.schrondinger.quin.Utils.Util;
 import com.schrondinger.quin.base.activity.ActivityInject;
 import com.schrondinger.quin.base.activity.BaseActivity;
 import com.schrondinger.quin.common.RxManager;
+import com.schrondinger.quin.ui.login.LoginActivity;
 import com.schrondinger.quin.ui.main.fragment.TypeOneFragment;
 import com.schrondinger.quin.ui.main.fragment.TypeThreeFragment;
 import com.schrondinger.quin.ui.main.fragment.TypeTwoFragment;
@@ -175,7 +176,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                     @Override
                     public void onClick(View v) {
                         // 去登陆页面
-//                        toActivity(LoginActivity.class);
+                        toActivity(LoginActivity.class);
                     }
                 }, new View.OnClickListener() {
                     @Override
