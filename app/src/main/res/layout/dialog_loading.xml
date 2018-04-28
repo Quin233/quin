@@ -7,7 +7,7 @@
     android:layout_height="100dp">
 
 
-        <com.schrongder.nba.widget.GifView
+        <com.schrondinger.quin.widget.GifView
             android:layout_marginTop="5dp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/iv_loading"
