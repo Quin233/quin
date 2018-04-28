@@ -2,7 +2,8 @@ package com.schrondinger.quin.base.mvp;
 
 import android.content.Context;
 
-import com.schrongder.nba.common.RxManager;
+import com.schrondinger.quin.common.RxManager;
+
 
 /**
  * Created by hp on 2018/1/3.

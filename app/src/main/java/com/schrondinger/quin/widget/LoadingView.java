@@ -85,14 +85,14 @@ public class LoadingView {
         }
 
         private void initViews() {
-            mLabelText = (TextView) findViewById(R.id.tv_loading);
+            mLabelText = findViewById(R.id.tv_loading);
             if (mLabel != null) {
                 mLabelText.setText(mLabel);
                 mLabelText.setVisibility(View.VISIBLE);
             } else {
                 mLabelText.setVisibility(View.GONE);
             }
-            mImageview = (GifView) findViewById(R.id.iv_loading);
+            mImageview = findViewById(R.id.iv_loading);
             mImageview.setMovieResource(R.drawable.loading_cat);
         }
 

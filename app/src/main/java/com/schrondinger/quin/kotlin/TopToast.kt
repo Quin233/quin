@@ -48,11 +48,11 @@ class TopToast(private var activiry:AppCompatActivity) {
         const val  SUCCESS = 0
         const val WARRING = SUCCESS + 1
         const val  Error = WARRING + 1
-        const val LENGTH_SHORT = 1500L
+        const val LENGTH_SHORT = 1500
 
-        const val LENGTH_LONG = 2000L
+        const val LENGTH_LONG = 2000
 
-        const val LENGTH_SHOW = -1L
+        const val LENGTH_SHOW = -1
         fun creat(activiry: AppCompatActivity): TopToast {
             return TopToast(activiry)
         }
@@ -115,7 +115,7 @@ class TopToast(private var activiry:AppCompatActivity) {
 
 
    fun duration(@Duration duration:Int): TopToast {
-        if (duration.toLong() != LENGTH_SHOW) {
+        if (duration != LENGTH_SHOW) {
             Observable.just(view).delay(duration.toLong(),TimeUnit.MILLISECONDS)
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe {

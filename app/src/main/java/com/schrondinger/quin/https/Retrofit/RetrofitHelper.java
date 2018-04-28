@@ -4,7 +4,6 @@ import com.orhanobut.logger.Logger;
 import com.schrondinger.quin.BuildConfig;
 import com.schrondinger.quin.Utils.Constants;
 import com.schrondinger.quin.Utils.SystemUtil;
-import com.schrondinger.quin.bean.Empty;
 import com.schrondinger.quin.https.api.NetApi;
 import com.schrondinger.quin.https.converter.JxGsonConverterFactory;
 import com.schrondinger.quin.https.cookies.CookiesManager;

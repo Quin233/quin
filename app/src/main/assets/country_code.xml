@@ -1,0 +1,222 @@
+<?xml version="1.1" encoding="utf-8"?>
+<World>
+    <Country_Region E_Name="A" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Angola" C_Name="安哥拉" IDNA="AO" Code="244"></Country_Region>
+    <Country_Region E_Name="Afghanistan" C_Name="阿富汗" IDNA="AF" Code="93"></Country_Region>
+    <Country_Region E_Name="Albania" C_Name="阿尔巴尼亚" IDNA="AL" Code="355"></Country_Region>
+    <Country_Region E_Name="Algeria" C_Name="阿尔及利亚" IDNA="DZ" Code="213"></Country_Region>
+    <Country_Region E_Name="Andorra" C_Name="安道尔共和国" IDNA="AD" Code="376"></Country_Region>
+    <Country_Region E_Name="Anguilla" C_Name="安圭拉岛" IDNA="AI" Code="1264"></Country_Region>
+    <Country_Region E_Name="Antigua and Barbuda" C_Name="安提瓜和巴布达" IDNA="AG" Code="1268"></Country_Region>
+    <Country_Region E_Name="Argentina" C_Name="阿根廷" IDNA="AR" Code="54"></Country_Region>
+    <Country_Region E_Name="Armenia" C_Name="亚美尼亚" IDNA="AM" Code="374"></Country_Region>
+    <Country_Region E_Name="Ascension" C_Name="阿森松" IDNA="" Code="247"></Country_Region>
+    <Country_Region E_Name="Australia" C_Name="澳大利亚" IDNA="AU" Code="61"></Country_Region>
+    <Country_Region E_Name="Austria" C_Name="奥地利" IDNA="AT" Code="43"></Country_Region>
+    <Country_Region E_Name="Azerbaijan" C_Name="阿塞拜疆" IDNA="AZ" Code="994"></Country_Region>
+    <Country_Region E_Name="B" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Bahamas" C_Name="巴哈马" IDNA="BS" Code="1242"></Country_Region>
+    <Country_Region E_Name="Bahrain" C_Name="巴林" IDNA="BH" Code="973"></Country_Region>
+    <Country_Region E_Name="Bangladesh" C_Name="孟加拉国" IDNA="BD" Code="880"></Country_Region>
+    <Country_Region E_Name="Barbados" C_Name="巴巴多斯" IDNA="BB" Code="1246"></Country_Region>
+    <Country_Region E_Name="Belarus" C_Name="白俄罗斯" IDNA="BY" Code="375"></Country_Region>
+    <Country_Region E_Name="Belgium" C_Name="比利时" IDNA="BE" Code="32"></Country_Region>
+    <Country_Region E_Name="Belize" C_Name="伯利兹" IDNA="BZ" Code="501"></Country_Region>
+    <Country_Region E_Name="Benin" C_Name="贝宁" IDNA="BJ" Code="229"></Country_Region>
+    <Country_Region E_Name="Bermuda Is." C_Name="百慕大群岛" IDNA="BM" Code="1441"></Country_Region>
+    <Country_Region E_Name="Bolivia" C_Name="玻利维亚" IDNA="BO" Code="591"></Country_Region>
+    <Country_Region E_Name="Botswana" C_Name="博茨瓦纳" IDNA="BW" Code="267"></Country_Region>
+    <Country_Region E_Name="Brazil" C_Name="巴西" IDNA="BR" Code="55"></Country_Region>
+    <Country_Region E_Name="Brunei" C_Name="文莱" IDNA="BN" Code="673"></Country_Region>
+    <Country_Region E_Name="Bulgaria" C_Name="保加利亚" IDNA="BG" Code="359"></Country_Region>
+    <Country_Region E_Name="Burkina-faso" C_Name="布基纳法索" IDNA="BF" Code="226"></Country_Region>
+    <Country_Region E_Name="Burma" C_Name="缅甸" IDNA="MM" Code="95"></Country_Region>
+    <Country_Region E_Name="Burundi" C_Name="布隆迪" IDNA="BI" Code="257"></Country_Region>
+    <Country_Region E_Name="C" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Cameroon" C_Name="喀麦隆" IDNA="CM" Code="237"></Country_Region>
+    <Country_Region E_Name="Canada" C_Name="加拿大" IDNA="CA" Code="1"></Country_Region>
+    <Country_Region E_Name="Cayman Is." C_Name="开曼群岛" IDNA="" Code="1345"></Country_Region>
+    <Country_Region E_Name="Central African Republic" C_Name="中非共和国" IDNA="CF" Code="236"></Country_Region>
+    <Country_Region E_Name="Chad" C_Name="乍得" IDNA="TD" Code="235"></Country_Region>
+    <Country_Region E_Name="Chile" C_Name="智利" IDNA="CL" Code="56"></Country_Region>
+    <Country_Region E_Name="China" C_Name="中国" IDNA="CN" Code="86"></Country_Region>
+    <Country_Region E_Name="Colombia" C_Name="哥伦比亚" IDNA="CO" Code="57"></Country_Region>
+    <Country_Region E_Name="Congo" C_Name="刚果" IDNA="CG" Code="242"></Country_Region>
+    <Country_Region E_Name="Cook Is." C_Name="库克群岛" IDNA="CK" Code="682"></Country_Region>
+    <Country_Region E_Name="Costa Rica" C_Name="哥斯达黎加" IDNA="CR" Code="506"></Country_Region>
+    <Country_Region E_Name="Cuba" C_Name="古巴" IDNA="CU" Code="53"></Country_Region>
+    <Country_Region E_Name="Cyprus" C_Name="塞浦路斯" IDNA="CY" Code="357"></Country_Region>
+    <Country_Region E_Name="Czech Republic" C_Name="捷克" IDNA="CZ" Code="420"></Country_Region>
+    <Country_Region E_Name="D" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Denmark" C_Name="丹麦" IDNA="DK" Code="45"></Country_Region>
+    <Country_Region E_Name="Djibouti" C_Name="吉布提" IDNA="DJ" Code="253"></Country_Region>
+    <Country_Region E_Name="Dominica Rep." C_Name="多米尼加共和国" IDNA="DO" Code="1890"></Country_Region>
+    <Country_Region E_Name="E" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Ecuador" C_Name="厄瓜多尔" IDNA="EC" Code="593"></Country_Region>
+    <Country_Region E_Name="Egypt" C_Name="埃及" IDNA="EG" Code="20"></Country_Region>
+    <Country_Region E_Name="EI Salvador" C_Name="萨尔瓦多" IDNA="SV" Code="503"></Country_Region>
+    <Country_Region E_Name="Estonia" C_Name="爱沙尼亚" IDNA="EE" Code="372"></Country_Region>
+    <Country_Region E_Name="Ethiopia" C_Name="埃塞俄比亚" IDNA="ET" Code="251"></Country_Region>
+    <Country_Region E_Name="F" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Fiji" C_Name="斐济" IDNA="FJ" Code="679"></Country_Region>
+    <Country_Region E_Name="Finland" C_Name="芬兰" IDNA="FI" Code="358"></Country_Region>
+    <Country_Region E_Name="France" C_Name="法国" IDNA="FR" Code="33"></Country_Region>
+    <Country_Region E_Name="French Guiana" C_Name="法属圭亚那" IDNA="GF" Code="594"></Country_Region>
+    <Country_Region E_Name="G" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Gabon" C_Name="加蓬" IDNA="GA" Code="241"></Country_Region>
+    <Country_Region E_Name="Gambia" C_Name="冈比亚" IDNA="GM" Code="220"></Country_Region>
+    <Country_Region E_Name="Georgia" C_Name="格鲁吉亚" IDNA="GE" Code="995"></Country_Region>
+    <Country_Region E_Name="Germany" C_Name="德国" IDNA="DE" Code="49"></Country_Region>
+    <Country_Region E_Name="Ghana" C_Name="加纳" IDNA="GH" Code="233"></Country_Region>
+    <Country_Region E_Name="Gibraltar" C_Name="直布罗陀" IDNA="GI" Code="350"></Country_Region>
+    <Country_Region E_Name="Greece" C_Name="希腊" IDNA="GR" Code="30"></Country_Region>
+    <Country_Region E_Name="Grenada" C_Name="格林纳达" IDNA="GD" Code="1809"></Country_Region>
+    <Country_Region E_Name="Guam" C_Name="关岛" IDNA="GU" Code="1671"></Country_Region>
+    <Country_Region E_Name="Guatemala" C_Name="危地马拉" IDNA="GT" Code="502"></Country_Region>
+    <Country_Region E_Name="Guinea" C_Name="几内亚" IDNA="GN" Code="224"></Country_Region>
+    <Country_Region E_Name="Guyana" C_Name="圭亚那" IDNA="GY" Code="592"></Country_Region>
+    <Country_Region E_Name="Haiti" C_Name="海地" IDNA="HT" Code="509"></Country_Region>
+    <Country_Region E_Name="H" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Honduras" C_Name="洪都拉斯" IDNA="HN" Code="504"></Country_Region>
+    <Country_Region E_Name="Hongkong" C_Name="香港" IDNA="HK" Code="852"></Country_Region>
+    <Country_Region E_Name="Hungary" C_Name="匈牙利" IDNA="HU" Code="36"></Country_Region>
+    <Country_Region E_Name="I" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Iceland" C_Name="冰岛" IDNA="IS" Code="354"></Country_Region>
+    <Country_Region E_Name="India" C_Name="印度" IDNA="IN" Code="91"></Country_Region>
+    <Country_Region E_Name="Indonesia" C_Name="印度尼西亚" IDNA="ID" Code="62"></Country_Region>
+    <Country_Region E_Name="Iran" C_Name="伊朗" IDNA="IR" Code="98"></Country_Region>
+    <Country_Region E_Name="Iraq" C_Name="伊拉克" IDNA="IQ" Code="964"></Country_Region>
+    <Country_Region E_Name="Ireland" C_Name="爱尔兰" IDNA="IE" Code="353"></Country_Region>
+    <Country_Region E_Name="Israel" C_Name="以色列" IDNA="IL" Code="972"></Country_Region>
+    <Country_Region E_Name="Italy" C_Name="意大利" IDNA="IT" Code="39"></Country_Region>
+    <Country_Region E_Name="Ivory Coast" C_Name="科特迪瓦" IDNA="" Code="225"></Country_Region>
+    <Country_Region E_Name="J" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Jamaica" C_Name="牙买加" IDNA="JM" Code="1876"></Country_Region>
+    <Country_Region E_Name="Japan" C_Name="日本" IDNA="JP" Code="81"></Country_Region>
+    <Country_Region E_Name="Jordan" C_Name="约旦" IDNA="JO" Code="962"></Country_Region>
+    <Country_Region E_Name="K" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Kampuchea (Cambodia )" C_Name="柬埔寨" IDNA="KH" Code="855"></Country_Region>
+    <Country_Region E_Name="Kazakstan" C_Name="哈萨克斯坦" IDNA="KZ" Code="327"></Country_Region>
+    <Country_Region E_Name="Kenya" C_Name="肯尼亚" IDNA="KE" Code="254"></Country_Region>
+    <Country_Region E_Name="Korea" C_Name="韩国" IDNA="KR" Code="82"></Country_Region>
+    <Country_Region E_Name="Kuwait" C_Name="科威特" IDNA="KW" Code="965"></Country_Region>
+    <Country_Region E_Name="Kyrgyzstan" C_Name="吉尔吉斯坦" IDNA="KG" Code="331"></Country_Region>
+    <Country_Region E_Name="L" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Laos" C_Name="老挝" IDNA="LA" Code="856"></Country_Region>
+    <Country_Region E_Name="Latvia" C_Name="拉脱维亚" IDNA="LV" Code="371"></Country_Region>
+    <Country_Region E_Name="Lebanon" C_Name="黎巴嫩" IDNA="LB" Code="961"></Country_Region>
+    <Country_Region E_Name="Lesotho" C_Name="莱索托" IDNA="LS" Code="266"></Country_Region>
+    <Country_Region E_Name="Liberia" C_Name="利比里亚" IDNA="LR" Code="231"></Country_Region>
+    <Country_Region E_Name="Libya" C_Name="利比亚" IDNA="LY" Code="218"></Country_Region>
+    <Country_Region E_Name="Liechtenstein" C_Name="列支敦士登" IDNA="LI" Code="423"></Country_Region>
+    <Country_Region E_Name="Lithuania" C_Name="立陶宛" IDNA="LT" Code="370"></Country_Region>
+    <Country_Region E_Name="Luxembourg" C_Name="卢森堡" IDNA="LU" Code="352"></Country_Region>
+    <Country_Region E_Name="M" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Macao" C_Name="澳门" IDNA="MO" Code="853"></Country_Region>
+    <Country_Region E_Name="Madagascar" C_Name="马达加斯加" IDNA="MG" Code="261"></Country_Region>
+    <Country_Region E_Name="Malawi" C_Name="马拉维" IDNA="MW" Code="265"></Country_Region>
+    <Country_Region E_Name="Malaysia" C_Name="马来西亚" IDNA="MY" Code="60"></Country_Region>
+    <Country_Region E_Name="Maldives" C_Name="马尔代夫" IDNA="MV" Code="960"></Country_Region>
+    <Country_Region E_Name="Mali" C_Name="马里" IDNA="ML" Code="223"></Country_Region>
+    <Country_Region E_Name="Malta" C_Name="马耳他" IDNA="MT" Code="356"></Country_Region>
+    <Country_Region E_Name="Mariana Is" C_Name="马里亚那群岛" IDNA="" Code="1670"></Country_Region>
+    <Country_Region E_Name="Martinique" C_Name="马提尼克" IDNA="" Code="596"></Country_Region>
+    <Country_Region E_Name="Mauritius" C_Name="毛里求斯" IDNA="MU" Code="230"></Country_Region>
+    <Country_Region E_Name="Mexico" C_Name="墨西哥" IDNA="MX" Code="52"></Country_Region>
+    <Country_Region E_Name="Moldova, Republic of" C_Name="摩尔多瓦" IDNA="MD" Code="373"></Country_Region>
+    <Country_Region E_Name="Monaco" C_Name="摩纳哥" IDNA="MC" Code="377"></Country_Region>
+    <Country_Region E_Name="Mongolia" C_Name="蒙古" IDNA="MN" Code="976"></Country_Region>
+    <Country_Region E_Name="Montserrat Is" C_Name="蒙特塞拉特岛" IDNA="MS" Code="1664"></Country_Region>
+    <Country_Region E_Name="Morocco" C_Name="摩洛哥" IDNA="MA" Code="212"></Country_Region>
+    <Country_Region E_Name="Mozambique" C_Name="莫桑比克" IDNA="MZ" Code="258"></Country_Region>
+    <Country_Region E_Name="N" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Namibia" C_Name="纳米比亚" IDNA="NA" Code="264"></Country_Region>
+    <Country_Region E_Name="Nauru" C_Name="瑙鲁" IDNA="NR" Code="674"></Country_Region>
+    <Country_Region E_Name="Nepal" C_Name="尼泊尔" IDNA="NP" Code="977"></Country_Region>
+    <Country_Region E_Name="Netheriands Antilles" C_Name="荷属安的列斯" IDNA="" Code="599"></Country_Region>
+    <Country_Region E_Name="Netherlands" C_Name="荷兰" IDNA="NL" Code="31"></Country_Region>
+    <Country_Region E_Name="New Zealand" C_Name="新西兰" IDNA="NZ" Code="64"></Country_Region>
+    <Country_Region E_Name="Nicaragua" C_Name="尼加拉瓜" IDNA="NI" Code="505"></Country_Region>
+    <Country_Region E_Name="Niger" C_Name="尼日尔" IDNA="NE" Code="227"></Country_Region>
+    <Country_Region E_Name="Nigeria" C_Name="尼日利亚" IDNA="NG" Code="234"></Country_Region>
+    <Country_Region E_Name="North Korea" C_Name="朝鲜" IDNA="KP" Code="850"></Country_Region>
+    <Country_Region E_Name="Norway" C_Name="挪威" IDNA="NO" Code="47"></Country_Region>
+    <Country_Region E_Name="O" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Oman" C_Name="阿曼" IDNA="OM" Code="968"></Country_Region>
+    <Country_Region E_Name="P" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Pakistan" C_Name="巴基斯坦" IDNA="PK" Code="92"></Country_Region>
+    <Country_Region E_Name="Panama" C_Name="巴拿马" IDNA="PA" Code="507"></Country_Region>
+    <Country_Region E_Name="Papua New Cuinea" C_Name="巴布亚新几内亚" IDNA="PG" Code="675"></Country_Region>
+    <Country_Region E_Name="Paraguay" C_Name="巴拉圭" IDNA="PY" Code="595"></Country_Region>
+    <Country_Region E_Name="Peru" C_Name="秘鲁" IDNA="PE" Code="51"></Country_Region>
+    <Country_Region E_Name="Philippines" C_Name="菲律宾" IDNA="PH" Code="63"></Country_Region>
+    <Country_Region E_Name="Poland" C_Name="波兰" IDNA="PL" Code="48"></Country_Region>
+    <Country_Region E_Name="French Polynesia" C_Name="法属玻利尼西亚" IDNA="PF" Code="689"></Country_Region>
+    <Country_Region E_Name="Portugal" C_Name="葡萄牙" IDNA="PT" Code="351"></Country_Region>
+    <Country_Region E_Name="Puerto Rico" C_Name="波多黎各" IDNA="PR" Code="1787"></Country_Region>
+    <Country_Region E_Name="Q" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Qatar" C_Name="卡塔尔" IDNA="QA" Code="974"></Country_Region>
+    <Country_Region E_Name="R" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Reunion" C_Name="留尼旺" IDNA="" Code="262"></Country_Region>
+    <Country_Region E_Name="Romania" C_Name="罗马尼亚" IDNA="RO" Code="40"></Country_Region>
+    <Country_Region E_Name="Russia" C_Name="俄罗斯" IDNA="RU" Code="7"></Country_Region>
+    <Country_Region E_Name="S" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Saint Lueia" C_Name="圣卢西亚" IDNA="LC" Code="1758"></Country_Region>
+    <Country_Region E_Name="Saint Vincent" C_Name="圣文森特岛" IDNA="VC" Code="1784"></Country_Region>
+    <Country_Region E_Name="Samoa Eastern" C_Name="东萨摩亚(美)" IDNA="" Code="684"></Country_Region>
+    <Country_Region E_Name="Samoa Western" C_Name="西萨摩亚" IDNA="" Code="685"></Country_Region>
+    <Country_Region E_Name="San Marino" C_Name="圣马力诺" IDNA="SM" Code="378"></Country_Region>
+    <Country_Region E_Name="Sao Tome and Principe" C_Name="圣多美和普林西比" IDNA="ST" Code="239"></Country_Region>
+    <Country_Region E_Name="Saudi Arabia" C_Name="沙特阿拉伯" IDNA="SA" Code="966"></Country_Region>
+    <Country_Region E_Name="Senegal" C_Name="塞内加尔" IDNA="SN	" Code="221"></Country_Region>
+    <Country_Region E_Name="Seychelles" C_Name="塞舌尔" IDNA="SC" Code="248"></Country_Region>
+    <Country_Region E_Name="Sierra Leone" C_Name="塞拉利昂" IDNA="SL" Code="232"></Country_Region>
+    <Country_Region E_Name="Singapore" C_Name="新加坡" IDNA="SG" Code="65"></Country_Region>
+    <Country_Region E_Name="Slovakia" C_Name="斯洛伐克" IDNA="SK" Code="421"></Country_Region>
+    <Country_Region E_Name="Slovenia" C_Name="斯洛文尼亚" IDNA="SI" Code="386"></Country_Region>
+    <Country_Region E_Name="Solomon Is" C_Name="所罗门群岛" IDNA="SB" Code="677"></Country_Region>
+    <Country_Region E_Name="Somali" C_Name="索马里" IDNA="SO" Code="252"></Country_Region>
+    <Country_Region E_Name="South Africa" C_Name="南非" IDNA="ZA" Code="27"></Country_Region>
+    <Country_Region E_Name="Spain" C_Name="西班牙" IDNA="ES" Code="34"></Country_Region>
+    <Country_Region E_Name="Sri Lanka" C_Name="斯里兰卡" IDNA="LK" Code="94"></Country_Region>
+    <Country_Region E_Name="St.Lucia" C_Name="圣卢西亚" IDNA="LC" Code="1758"></Country_Region>
+    <Country_Region E_Name="St.Vincent" C_Name="圣文森特" IDNA="VC" Code="1784"></Country_Region>
+    <Country_Region E_Name="Sudan" C_Name="苏丹" IDNA="SD" Code="249"></Country_Region>
+    <Country_Region E_Name="Suriname" C_Name="苏里南" IDNA="SR" Code="597"></Country_Region>
+    <Country_Region E_Name="Swaziland" C_Name="斯威士兰" IDNA="SZ" Code="268"></Country_Region>
+    <Country_Region E_Name="Sweden" C_Name="瑞典" IDNA="SE" Code="46"></Country_Region>
+    <Country_Region E_Name="Switzerland" C_Name="瑞士" IDNA="CH" Code="41"></Country_Region>
+    <Country_Region E_Name="Syria" C_Name="叙利亚" IDNA="SY" Code="963"></Country_Region>
+    <Country_Region E_Name="T" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Taiwan" C_Name="台湾省" IDNA="TW" Code="886"></Country_Region>
+    <Country_Region E_Name="Tajikstan" C_Name="塔吉克斯坦" IDNA="TJ" Code="992"></Country_Region>
+    <Country_Region E_Name="Tanzania" C_Name="坦桑尼亚" IDNA="TZ" Code="255"></Country_Region>
+    <Country_Region E_Name="Thailand" C_Name="泰国" IDNA="TH" Code="66"></Country_Region>
+    <Country_Region E_Name="Togo" C_Name="多哥" IDNA="TG" Code="228"></Country_Region>
+    <Country_Region E_Name="Tonga" C_Name="汤加" IDNA="TO" Code="676"></Country_Region>
+    <Country_Region E_Name="Trinidad and Tobago" C_Name="特立尼达和多巴哥" IDNA="TT" Code="1809"></Country_Region>
+    <Country_Region E_Name="Tunisia" C_Name="突尼斯" IDNA="TN" Code="216"></Country_Region>
+    <Country_Region E_Name="Turkey" C_Name="土耳其" IDNA="TR" Code="90"></Country_Region>
+    <Country_Region E_Name="Turkmenistan" C_Name="土库曼斯坦" IDNA="TM" Code="993"></Country_Region>
+    <Country_Region E_Name="U" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Uganda" C_Name="乌干达" IDNA="UG" Code="256"></Country_Region>
+    <Country_Region E_Name="Ukraine" C_Name="乌克兰" IDNA="UA" Code="380"></Country_Region>
+    <Country_Region E_Name="United Arab Emirates" C_Name="阿拉伯联合酋长国" IDNA="AE" Code="971"></Country_Region>
+    <Country_Region E_Name="United Kiongdom" C_Name="英国" IDNA="GB" Code="44"></Country_Region>
+    <Country_Region E_Name="United States of America" C_Name="美国" IDNA="US" Code="1"></Country_Region>
+    <Country_Region E_Name="Uruguay" C_Name="乌拉圭" IDNA="UY" Code="598"></Country_Region>
+    <Country_Region E_Name="Uzbekistan" C_Name="乌兹别克斯坦" IDNA="UZ" Code="233"></Country_Region>
+    <Country_Region E_Name="V" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Venezuela" C_Name="委内瑞拉" IDNA="VE" Code="58"></Country_Region>
+    <Country_Region E_Name="Vietnam" C_Name="越南" IDNA="VN" Code="84"></Country_Region>
+    <Country_Region E_Name="Y" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Yemen" C_Name="也门" IDNA="YE" Code="967"></Country_Region>
+    <Country_Region E_Name="Yugoslavia" C_Name="南斯拉夫" IDNA="YU" Code="381"></Country_Region>
+    <Country_Region E_Name="Z" C_Name="" IDNA="" Code=""></Country_Region>
+    <Country_Region E_Name="Zimbabwe" C_Name="津巴布韦" IDNA="ZW" Code="263"></Country_Region>
+    <Country_Region E_Name="Zaire" C_Name="扎伊尔" IDNA="ZR" Code="243"></Country_Region>
+    <Country_Region E_Name="Zambia" C_Name="赞比亚" IDNA="ZM" Code="260"></Country_Region>
+</World>
+
+
+

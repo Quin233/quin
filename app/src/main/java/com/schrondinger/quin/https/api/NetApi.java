@@ -1,11 +1,11 @@
 package com.schrondinger.quin.https.api;
 
 import com.schrondinger.quin.bean.Empty;
+import com.schrondinger.quin.bean.Result;
 import com.schrondinger.quin.bean.User;
 
 import io.reactivex.Observable;
 import okhttp3.RequestBody;
-import retrofit2.adapter.rxjava2.Result;
 import retrofit2.http.Body;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
