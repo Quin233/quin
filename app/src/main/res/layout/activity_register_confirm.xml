@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.register.RegisterConfirmActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <android.support.v7.widget.Toolbar
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/colorWhite">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login_register"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <include layout="@layout/line_match_top"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="50dp">
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:text="@string/register_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/et_pwd"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="15dp"
+            android:hint="@string/register_pwd_hint"
+            android:maxLength="11"
+            android:textColorHint="@color/hint_color"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/sp_country"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <include layout="@layout/line_left"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:gravity="center"
+            android:text="@string/register_pwd"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_pwdTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/sp_country"
+            android:background="@drawable/et_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/register_pwd_hint_d"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/hint_color"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_match"/>
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_login_login_bg"
+        android:text="@string/login_register"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

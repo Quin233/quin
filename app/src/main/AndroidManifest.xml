@@ -28,6 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.register.CountryRegionSelectActivity" />
+        <activity android:name=".webview.ProtocolActivity" />
+        <activity android:name=".ui.register.RegisterConfirmActivity" />
+        <activity android:name=".ui.register.RegisterResultActivity"></activity>
     </application>
 
 </manifest>
