@@ -20,6 +20,7 @@ import java.io.InputStream;
 
 import butterknife.BindView;
 import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -53,7 +54,7 @@ public class TypeTwoFragment extends BaseFragment {
     public void initData() {
         super.initData();
 
-        Flowable.just("goutouren.jpg"). // 被订阅的数据源
+        Observable.just("goutouren.jpg"). // 被订阅的数据源
                 subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
                 .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
                 .map(new Function<String, Bitmap>() {
