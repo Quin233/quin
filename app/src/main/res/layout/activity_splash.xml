@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.main.SplashActivity">
+
+    <com.schrondinger.quin.widget.CountDownView
+        android:visibility="invisible"
+        android:id="@+id/cv_countDownView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:background_color="@color/colorWhite"
+        app:border_color="#c41515"
+        app:border_width="2dp"
+        app:text="跳过"
+        app:text_color="#15D"
+        app:text_size="12sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nba" />
+
+
+</RelativeLayout>

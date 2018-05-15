@@ -21,19 +21,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.MainActivity">
+        <activity
+            android:name=".ui.main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.register.CountryRegionSelectActivity" />
         <activity android:name=".webview.ProtocolActivity" />
         <activity android:name=".ui.register.RegisterConfirmActivity" />
-        <activity android:name=".ui.register.RegisterResultActivity"></activity>
+        <activity android:name=".ui.register.RegisterResultActivity" />
+        <activity android:name=".ui.main.WelcomeActivity"></activity>
     </application>
 
 </manifest>
