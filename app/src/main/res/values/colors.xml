@@ -9,6 +9,8 @@
     <color name="colorGray">#808080</color>
     <color name="transparent">#0000</color>
 
+    <color name="second_color">#999</color>
+
     <color name="hint_color">#bbbbbb</color>
     <color name="divider">#e5e5e5</color>
 </resources>

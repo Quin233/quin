@@ -38,7 +38,10 @@
         <activity android:name=".webview.ProtocolActivity" />
         <activity android:name=".ui.register.RegisterConfirmActivity" />
         <activity android:name=".ui.register.RegisterResultActivity" />
-        <activity android:name=".ui.main.WelcomeActivity"></activity>
+        <activity android:name=".ui.main.WelcomeActivity" />
+        <activity android:name=".ui.mine.MineActivity" />
+        <activity android:name=".ui.mine.UserInfoActivity" />
+        <activity android:name=".ui.mine.UserHeadPhotoActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mine.MineActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/al_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:statusBarScrim="?attr/colorPrimaryDark"
+            android:background="@color/colorWhite"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout
+                android:id="@+id/mine_head1"
+                android:layout_width="match_parent"
+                android:layout_height="165dp">
+                <ImageView
+                    android:background="#159"
+                    android:id="@+id/mine_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp" />
+                <com.schrondinger.quin.widget.CircleImageView
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="100dp"
+                    android:id="@+id/mine_im_head"
+                    android:layout_width="60dp"
+                    android:src="@mipmap/head_default"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:padding="3dp"
+                    android:background="@drawable/text_user_type"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/mine_im_head"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/user_type"
+                    android:textSize="9sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#FF1445"
+                    android:padding="5dp"
+                    android:background="@drawable/text_user_info"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="账号资料"
+                    android:textSize="12sp"
+                    android:id="@+id/user_info"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/mine_head2"
+                android:layout_marginTop="165dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_name"
+                    android:textSize="17sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_alignBottom="@+id/user_name"
+                    android:layout_toRightOf="@+id/user_name"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/user_gender"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/user_gender"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/user_article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="11sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/user_article"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/user_qianmingdang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/view_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/colorWhite"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </android.support.v7.widget.Toolbar>>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <include layout="@layout/line_match"></include>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_tab"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorHeight="4dp"
+            app:tabSelectedTextColor="#000"
+            app:tabTextColor="#fff"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+
+</android.support.design.widget.CoordinatorLayout>

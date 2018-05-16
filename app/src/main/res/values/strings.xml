@@ -33,6 +33,18 @@
     <!-- 简单名词 -->
     <string name="home">首页</string>
 
+    <!-- 个人信息 -->
+    <string name="user_info">账号资料</string>
+    <string name="user_info_head">头像</string>
+    <string name="user_info_name">昵称</string>
+    <string name="user_info_id">UID</string>
+    <string name="user_info_gender">性别</string>
+    <string name="user_info_qianming">个性签名</string>
+    <string name="user_info_out">退出登录</string>
+    <string name="user_head_all">旋转缩放</string>
+    <string name="user_head_zoom">仅缩放</string>
+    <string name="user_head_rotate">仅旋转</string>
+
 
     <!-- dialog -->
     <string name="head_select">头像选择</string>

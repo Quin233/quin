@@ -26,6 +26,7 @@ import com.schrondinger.quin.ui.login.LoginActivity;
 import com.schrondinger.quin.ui.main.fragment.TypeOneFragment;
 import com.schrondinger.quin.ui.main.fragment.TypeThreeFragment;
 import com.schrondinger.quin.ui.main.fragment.TypeTwoFragment;
+import com.schrondinger.quin.ui.mine.MineActivity;
 import com.schrondinger.quin.widget.CircleImageView;
 import com.schrondinger.quin.widget.dialog.SchrodingerDialog;
 
@@ -79,6 +80,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public void initListener() {
         super.initListener();
         mTabHost.setOnTabChangedListener(this);
+        mUserHeadIcon.setOnClickListener(this);
     }
 
     @Override
@@ -89,7 +91,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         mRxManager.register(RxManager.ISLOGIN).subscribe(new Consumer<Object>() {
             @Override
             public void accept(Object o) {
-//                checkIsLoagin();
+                checkIsLogin();
             }});
     }
 
@@ -143,6 +145,19 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
         navView.setNavigationItemSelectedListener(this);
         navView.setCheckedItem(R.id.nav_home);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.iv_user_head_icon:
+                if (Util.isNullOrEmpty(Constants.user)){
+
+                }else{
+                    toActivity(MineActivity.class);
+                }
+                break;
+        }
     }
 
     @Override

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#05000000"
+    tools:context=".ui.mine.UserInfoActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/user_info"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_user_head"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="@string/user_info_head"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <com.schrondinger.quin.widget.CircleImageView
+            android:layout_marginTop="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/user_head"
+            android:layout_width="46dp"
+            android:src="@mipmap/head_default"
+            android:layout_height="46dp" />
+
+    </RelativeLayout>
+    <include layout="@layout/line_match"/>
+    <RelativeLayout
+        android:id="@+id/rl_user_name"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="@string/user_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="@color/second_color"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="你猜猜我是谁"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <include layout="@layout/line_match"/>
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="@string/user_info_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="@color/second_color"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="18"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <include layout="@layout/line_match"/>
+    <RelativeLayout
+        android:id="@+id/rl_user_gender"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="@string/user_info_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="@color/second_color"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="难"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <include layout="@layout/line_match"/>
+    <RelativeLayout
+        android:id="@+id/rl_user_qianming"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="@string/user_info_qianming"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="@color/second_color"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="想来没有猫的日子，薛定谔是怎么过的？"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/user_qianming"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <include layout="@layout/line_match_block"/>
+
+
+    <TextView
+        android:id="@+id/out"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="15dp"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textColor="@color/hint_color"
+        android:text="@string/user_info_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <include layout="@layout/line_match_block"/>
+
+
+</LinearLayout>
