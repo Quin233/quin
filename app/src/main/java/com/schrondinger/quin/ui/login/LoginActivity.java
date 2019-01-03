@@ -81,17 +81,17 @@ public class LoginActivity extends BaseMVPActivity<LoginPresenter,LoginModel> im
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login:
-                if (check()){
-                    Map<String,String> sendMap = new HashMap<>();
-                    sendMap.put("userPhone",phone);
-                    sendMap.put("userPwd",pwd);
-                    mPresenter.login(sendMap);
-                }
+//                if (check()){
+//                    Map<String,String> sendMap = new HashMap<>();
+//                    sendMap.put("userName",phone);
+//                    sendMap.put("userPwd",pwd);
+//                    mPresenter.login(sendMap);
+//                }
+                jumpToMain();
                 break;
             case R.id.tv_register:
                 toActivity(RegisterActivity.class);
                 break;
-            case R.id.iv_isRemenber:
             case R.id.tv_isRemenber:
                 if (SpUtil.getString(SpUtil.ISLODINSELF).equals("YES")){
                     mIv_isRemenber.setImageResource(R.drawable.login_select_b);
@@ -116,10 +116,10 @@ public class LoginActivity extends BaseMVPActivity<LoginPresenter,LoginModel> im
         pwd = mEt_password.getText().toString().trim();
 
         if (Util.isNullOrEmpty(phone)){
-            topToast.showType(TopToast.Error).setMessageText("请输入账号！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请输入账号！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else if (Util.isNullOrEmpty(pwd)){
-            topToast.showType(TopToast.Error).setMessageText("请输入密码！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请输入密码！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else {
             pwd = MD5Util.getMD5String(pwd);
@@ -139,6 +139,6 @@ public class LoginActivity extends BaseMVPActivity<LoginPresenter,LoginModel> im
 
     @Override
     public void jumpToMain() {
-        closeActivity();
+        finish();
     }
 }

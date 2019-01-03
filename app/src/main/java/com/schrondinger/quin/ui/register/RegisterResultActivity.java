@@ -26,7 +26,7 @@ public class RegisterResultActivity extends BaseActivity {
         super.onClick(v);
         switch (v.getId()){
             case R.id.tv_complete:
-                closeActivity();
+                finish();
                 break;
         }
     }

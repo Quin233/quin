@@ -31,7 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"/>
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.register.CountryRegionSelectActivity" />
@@ -41,7 +42,13 @@
         <activity android:name=".ui.main.WelcomeActivity" />
         <activity android:name=".ui.mine.MineActivity" />
         <activity android:name=".ui.mine.UserInfoActivity" />
-        <activity android:name=".ui.mine.UserHeadPhotoActivity"></activity>
+        <activity android:name=".ui.mine.UserHeadPhotoActivity" />
+        <activity android:name=".ui.other.OtherFunctionActivity" />
+        <activity android:name=".ui.other.customview.custom1.CustomView1Activity" />
+        <activity android:name=".ui.other.customview.CustomViewActivity" />
+        <activity android:name=".ui.other.customview.custom2.CustomView2Activity" />
+        <activity android:name=".ui.other.customview.custom3.CustomView3Activity" />
+        <activity android:name=".ui.other.customview.custom4.CustomView4Activity" />
     </application>
 
 </manifest>

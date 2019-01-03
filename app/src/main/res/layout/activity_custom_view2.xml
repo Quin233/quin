@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#05000000"
+    tools:context=".ui.mine.UserInfoActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="基础二"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/title_text_size" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:background="@color/colorGray"
+                android:id="@+id/ig_first_image"
+                android:layout_width="80dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/head_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <EditText
+            android:hint="输入宽度"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/et_width_up"
+            android:inputType="number"
+            android:layout_width="100dp"
+            android:layout_height="45dp" />
+            <EditText
+                android:id="@+id/et_height_up"
+                android:hint="输入高度"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:layout_width="100dp"
+                android:layout_height="45dp" />
+            <Button
+                android:text="修改"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_modify_up"
+                android:layout_width="100dp"
+                android:layout_height="45dp" />
+
+            <FrameLayout
+                android:background="@color/colorGray"
+                android:layout_marginTop="@dimen/all_margin_large"
+                android:id="@+id/sig_second_image"
+                android:layout_width="80dp"
+                android:layout_height="100dp">
+                <com.schrondinger.quin.ui.other.customview.custom2.SquareImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/head_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <EditText
+                android:hint="输入宽度"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/et_width_down"
+                android:inputType="number"
+                android:layout_width="100dp"
+                android:layout_height="45dp" />
+            <EditText
+                android:hint="输入高度"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:id="@+id/et_height_down"
+                android:inputType="number"
+                android:layout_width="100dp"
+                android:layout_height="45dp" />
+            <Button
+                android:text="修改"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_modify_down"
+                android:layout_width="100dp"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

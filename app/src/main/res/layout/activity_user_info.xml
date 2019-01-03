@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:text="@string/user_info"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_text_size" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -48,7 +48,7 @@
             android:layout_marginRight="15dp"
             android:id="@+id/user_head"
             android:layout_width="46dp"
-            android:src="@mipmap/head_default"
+            android:src="@drawable/head_default"
             android:layout_height="46dp" />
 
     </RelativeLayout>

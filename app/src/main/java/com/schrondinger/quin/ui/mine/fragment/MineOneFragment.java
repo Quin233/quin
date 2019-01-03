@@ -8,18 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.schrondinger.quin.R;
 import com.schrondinger.quin.base.activity.ActivityInject;
 import com.schrondinger.quin.base.activity.BaseFragment;
 
 import butterknife.BindView;
-import com.schrondinger.quin.R;
 
 @ActivityInject(rootViewId = R.layout.fragment_mine_one)
 public class MineOneFragment extends BaseFragment {
     @BindView(R.id.test_rv)
     RecyclerView mRv;
 
-    private String[] data = {"1","2","3","4","5","6","7","8","9","10","11","12"};
+    private String[] data = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"};
     public static MineOneFragment newInstance() {
 
         Bundle args = new Bundle();

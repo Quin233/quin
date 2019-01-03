@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import com.schrondinger.quin.R;
 import com.schrondinger.quin.Utils.Util;
-import com.schrondinger.quin.base.recyleview.BaseTurboAdapter;
-import com.schrondinger.quin.base.recyleview.BaseViewHolder;
+import com.schrondinger.quin.widget.recyleview.BaseTurboAdapter;
+import com.schrondinger.quin.widget.recyleview.BaseViewHolder;
 import com.schrondinger.quin.bean.CountryRegionResult;
 import java.util.List;
 

@@ -1,21 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.main.fragment.TypeOneFragment">
+    tools:context=".ui.main.MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-    <TextView
-        android:id="@+id/testText"
-        android:textSize="80sp"
-        android:text="第一个"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:text="点我"
-        android:id="@+id/testButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <android.support.v7.widget.Toolbar
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            app:contentInsetStart="0dp"
+            android:id="@+id/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-</LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.schrondinger.quin.widget.DrawerIconView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/di_open_drawer"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent" />
+
+                <com.schrondinger.quin.widget.CircleImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/ci_user_head"
+                    android:layout_marginStart="@dimen/all_margin_middle"
+                    android:src="@drawable/head_default"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/nav_search"
+                    android:layout_marginLeft="@dimen/all_margin_large"
+                    android:layout_marginRight="@dimen/all_margin_large">
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/all_margin_middle"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/nav_search_icon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/all_margin"
+                        android:layout_toRightOf="@+id/iv_search"
+                        android:text="热门信息"
+                        android:textColor="@color/colorWhite" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/all_margin_large"
+                    android:src="@drawable/ic_action_menu_submission"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/all_margin_large"
+                    android:src="@drawable/ic_download_white"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/all_margin_large"
+                    android:src="@drawable/ic_video_comment"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout
+            app:tabMode="fixed"
+            app:tabGravity="center"
+            android:id="@+id/tl_tab"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/colorWhite"
+            app:tabMinWidth="1dp"
+            app:tabPaddingStart="12dp"
+            app:tabPaddingEnd="12dp"
+            app:tabIndicatorHeight="2dp"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+</android.support.design.widget.CoordinatorLayout>

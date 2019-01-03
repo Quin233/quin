@@ -1,16 +1,5 @@
 package com.schrondinger.quin.ui.register;
 
-import com.schrondinger.quin.R;
-import com.schrondinger.quin.Utils.Util;
-import com.schrondinger.quin.base.activity.ActivityInject;
-import com.schrondinger.quin.base.activity.BaseMVPActivity;
-import com.schrondinger.quin.bean.CountryRegionResult;
-import com.schrondinger.quin.mvp.constract.RegisterConstract;
-import com.schrondinger.quin.mvp.model.RegisterModel;
-import com.schrondinger.quin.mvp.presenter.RegisterPresenter;
-import com.schrondinger.quin.webview.ProtocolActivity;
-import com.schrongder.nba.kotlin.TopToast;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,6 +17,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.schrondinger.quin.R;
+import com.schrondinger.quin.Utils.Util;
+import com.schrondinger.quin.base.activity.ActivityInject;
+import com.schrondinger.quin.base.activity.BaseMVPActivity;
+import com.schrondinger.quin.bean.CountryRegionResult;
+import com.schrondinger.quin.mvp.constract.RegisterConstract;
+import com.schrondinger.quin.mvp.model.RegisterModel;
+import com.schrondinger.quin.mvp.presenter.RegisterPresenter;
+import com.schrondinger.quin.webview.ProtocolActivity;
+import com.schrongder.nba.kotlin.TopToast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -236,7 +236,7 @@ public class RegisterActivity extends BaseMVPActivity<RegisterPresenter, Registe
         userPhone = mEt_phone.getText().toString().trim();
         if (Util.isNullOrEmpty(userPhone)){
             TopToast topToast = new TopToast(this);
-            topToast.showType(TopToast.Error).setMessageText("请填写手机号！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请填写手机号！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else{
             return true;

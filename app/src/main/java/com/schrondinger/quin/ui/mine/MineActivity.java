@@ -17,19 +17,22 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.gyf.barlibrary.ImmersionBar;
 import com.schrondinger.quin.R;
 import com.schrondinger.quin.Utils.Constants;
 import com.schrondinger.quin.Utils.Util;
 import com.schrondinger.quin.base.activity.ActivityInject;
 import com.schrondinger.quin.base.activity.BaseActivity;
+import com.schrondinger.quin.bean.common.CommMap;
 import com.schrondinger.quin.ui.mine.adapter.ContentPagerAdapter;
 import com.schrondinger.quin.ui.mine.fragment.MineOneFragment;
 import com.schrondinger.quin.ui.mine.fragment.MineThreeFragment;
 import com.schrondinger.quin.ui.mine.fragment.MineTwoFragment;
 import com.schrondinger.quin.widget.CircleImageView;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
-import butterknife.internal.Utils;
 
 @ActivityInject(rootViewId = R.layout.activity_mine)
 public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetChangedListener  {
@@ -64,8 +67,8 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
     TextView mUserInfo;
 
 
-
-    private String[] tabIndecators = {"主页","动态","收藏"};
+//    private String[] tabIndecators = {"主页","动态","收藏"};
+    private ArrayList<CommMap> tabIndecators = new ArrayList<>();
     private Fragment[] tabFragments = {MineOneFragment.newInstance(), MineTwoFragment.newInstance(), MineThreeFragment.newInstance()};
     private ContentPagerAdapter contentPagerAdapter;
     private CollapsingToolbarLayoutState state;
@@ -73,15 +76,19 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
     @Override
     public void initData() {
         super.initData();
+        tabIndecators.add(new CommMap("主页",MineOneFragment.class.getName()));
+        tabIndecators.add(new CommMap("动态",MineTwoFragment.class.getName()));
+        tabIndecators.add(new CommMap("收藏",MineThreeFragment.class.getName()));
     }
 
     @Override
     public void initView() {
         super.initView();
-        setToolBarCoordinator(mToolbar,this);
+        setToolBar(mToolbar);
+        ImmersionBar.with(this).init(); //初始化，默认透明状态栏和黑色导航栏
         initContent();
         initTab();
-        initText();
+//        initText();
     }
 
     @Override
@@ -97,23 +104,14 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
     }
 
     private void initContent(){
-        contentPagerAdapter = new ContentPagerAdapter(getSupportFragmentManager(),tabFragments);
+        contentPagerAdapter = new ContentPagerAdapter(getSupportFragmentManager(),tabIndecators);
         mContentVp.setAdapter(contentPagerAdapter);
         mContentVp.setCurrentItem(0);
-        mContentVp.setOffscreenPageLimit(3);
+        mContentVp.setOffscreenPageLimit(tabIndecators.size());
     }
 
     private void initTab(){
-        mTabTl.addTab(mTabTl.newTab().setText(tabIndecators[0]));
-        mTabTl.addTab(mTabTl.newTab().setText(tabIndecators[1]));
-        mTabTl.addTab(mTabTl.newTab().setText(tabIndecators[1]));
-
         mTabTl.setupWithViewPager(mContentVp);
-
-        mTabTl.getTabAt(0).setText(tabIndecators[0]);
-        mTabTl.getTabAt(1).setText(tabIndecators[1]);
-        mTabTl.getTabAt(2).setText(tabIndecators[2]);
-
         mTabTl.setTabTextColors(ContextCompat.getColor(this,R.color.tab_text_color),ContextCompat.getColor(this,R.color.colorPrimary));
         mTabTl.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
     }
@@ -130,7 +128,7 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
             mUserType.setText("普通会员");
         }
         if (Util.isNullOrEmpty(Constants.user.getUserHeadPhoto())){
-            mUserHead.setImageResource(R.mipmap.head_default);
+            mUserHead.setImageResource(R.drawable.head_default);
         }else {
             Glide.with(this).load(Constants.user.getUserHeadPhoto()).into(mUserHead);
         }
@@ -185,7 +183,8 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
 //            }
 //        }
         if (verticalOffset <= -(mRlHead1.getHeight()+mRlHead2.getHeight()) * 0.37) {
-            mToolbar.setTitle(Constants.user.getUserName());//设置title
+//            mToolbar.setTitle(Constants.user.getUserName());//设置title
+            mToolbar.setTitle("未登录");//设置title
         } else {
             mToolbar.setTitle("");
         }

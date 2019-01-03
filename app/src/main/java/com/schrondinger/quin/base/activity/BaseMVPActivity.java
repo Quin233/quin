@@ -3,7 +3,6 @@ package com.schrondinger.quin.base.activity;
 import android.os.Bundle;
 
 import com.orhanobut.logger.Logger;
-
 import com.schrondinger.quin.Utils.Constants;
 import com.schrondinger.quin.Utils.SpUtil;
 import com.schrondinger.quin.Utils.TUtil;
@@ -38,6 +37,7 @@ public abstract class BaseMVPActivity<P extends BasePresenter,M extends BaseMode
         }
     }
 
+
     @Override
     protected void onDestroy() {
         if (mPresenter != null) mPresenter.onDestroy();
@@ -57,7 +57,7 @@ public abstract class BaseMVPActivity<P extends BasePresenter,M extends BaseMode
         if (msg.startsWith("{")){//json错误
             try {
                 JSONObject jsonObject=new JSONObject(msg);
-                topToast.showType(TopToast.Error).setMessageText(jsonObject.optString("errormsg","")).duration(5000).show();
+                topToast.showType(TopToast.Error).setMessageText(jsonObject.optString("errormsg","")).duration(TopToast.LENGTH_LONG).show();
                 if (jsonObject.optString("errorcode").equals("role.invalid_user")){//会话超时
                     //清除session信息
                     SpUtil.clearCookies();
@@ -70,7 +70,7 @@ public abstract class BaseMVPActivity<P extends BasePresenter,M extends BaseMode
                 e.printStackTrace();
             }
         }else{//常规错误
-            topToast.showType(TopToast.Error).setMessageText(msg).duration(5000).show();
+            topToast.showType(TopToast.Error).setMessageText(msg).duration(TopToast.LENGTH_SHORT).show();
         }
     }
 

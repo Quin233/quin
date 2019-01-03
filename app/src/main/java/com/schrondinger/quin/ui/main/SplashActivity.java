@@ -20,6 +20,15 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import butterknife.BindView;
 import io.reactivex.functions.Consumer;
 
+/**
+ * ================================================
+ * 作    者：schrodinger
+ * 版    本：1.0
+ * 创建日期： 2017/12/17 9:29 AM
+ * 描    述：
+ * 修订历史：
+ * ================================================
+ */
 @ActivityInject(rootViewId = R.layout.activity_splash,title = R.string.app_name)
 public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel> implements SplashConstract.View, CountDownView.CountDownTimerListener {
 
@@ -86,7 +95,7 @@ public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel
                     mCountDownView.start(TIMES);
                 }else {
                     TopToast topToast = new TopToast(SplashActivity.this);
-                    topToast.showType(TopToast.Error).setMessageText("请在手机设置中确认存储、电话权限开启状态。").duration(2000).show();
+                    topToast.showType(TopToast.Error).setMessageText("请在手机设置中确认存储、电话权限开启状态。").duration(TopToast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -104,7 +113,8 @@ public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel
 
     @Override
     public void jumpToMain() {
-        toActivity(MainActivity.class,1);
+        toActivity(MainActivity.class);
+        this.finish();
     }
 
     @Override
@@ -114,13 +124,14 @@ public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel
     public void onFinishCount() {
         if (SpUtil.getFirstBoolean(SpUtil.ISFIRST)) {
             // 第一次登陆，进入欢迎界面
-            toActivity(WelcomeActivity.class,1);
+            toActivity(WelcomeActivity.class);
         } else {
             if (SpUtil.getString(SpUtil.ISLODINSELF).equals("NO")){
                 //清除session信息
                 SpUtil.clearCookies();
             }
-            toActivity(MainActivity.class,1);
+            toActivity(MainActivity.class);
+            this.finish();
         }
     }
 
