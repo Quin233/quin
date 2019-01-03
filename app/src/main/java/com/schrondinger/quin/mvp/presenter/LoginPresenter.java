@@ -19,10 +19,10 @@ import io.reactivex.functions.Consumer;
 public class LoginPresenter extends LoginConstract.Presenter {
     @Override
     public void login(Map<String, String> sendMap) {
-        mRxManager.add(mModel.login(sendMap).doOnSubscribe(new Consumer() {
+        getMRxManager().add(getMModel().login(sendMap).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                mView.onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.WAITING);
             }
         }).subscribe(new Consumer<User>() { // onNext
             @Override
@@ -35,19 +35,19 @@ public class LoginPresenter extends LoginConstract.Presenter {
                 SpUtil.setString(SpUtil.USERPHONE, user.getUserPhone());
                 SpUtil.setString(SpUtil.USERFLAG, user.getUserType());
                 //post订阅消息
-                mRxManager.post(RxManager.ISLOGIN,user);
-                mView.jumpToMain();
+                getMRxManager().post(RxManager.ISLOGIN,user);
+                getMView().jumpToMain();
             }
         }, new Consumer<Throwable>() { // onError
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
 
-                mView.onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                mView.onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.WAITING);
             }
         }));
     }

@@ -2,7 +2,6 @@ package com.schrondinger.quin.ui.mine.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,9 +22,7 @@ public class MineTwoFragment extends BaseFragment {
 
     private String[] data = {"11","12","13","14","15","16","17","18","19","20","21","22","11","12","13","14","15","16","17","18","19","20","21","22"};
     public static MineTwoFragment newInstance() {
-
         Bundle args = new Bundle();
-
         MineTwoFragment fragment = new MineTwoFragment();
         fragment.setArguments(args);
         return fragment;

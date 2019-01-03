@@ -16,6 +16,15 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 
+/**
+ * ================================================
+ * 作    者：schrodinger
+ * 版    本：1.0
+ * 创建日期： 2017/12/17 9:29 AM
+ * 描    述：
+ * 修订历史：
+ * ================================================
+ */
 @ActivityInject(rootViewId = R.layout.activity_welcome)
 public class WelcomeActivity extends BaseActivity {
     @BindView(R.id.viewPager)
@@ -75,7 +84,8 @@ public class WelcomeActivity extends BaseActivity {
         switch (v.getId()){
             case R.id.btn_go:
                 SpUtil.setBoolean(SpUtil.ISFIRST,false);
-                toActivity(MainActivity.class,1);
+                toActivity(MainActivity.class);
+                this.finish();
                 break;
         }
     }

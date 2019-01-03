@@ -1,4 +1,12 @@
 package com.schrondinger.quin.ui.register;
+
+import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
+
 import com.schrondinger.quin.R;
 import com.schrondinger.quin.Utils.Constants;
 import com.schrondinger.quin.base.activity.ActivityInject;
@@ -10,14 +18,6 @@ import com.schrondinger.quin.mvp.presenter.CountryRegionSelectPresenter;
 import com.schrondinger.quin.ui.register.pendent.CountryListAdapter;
 import com.schrondinger.quin.ui.register.pendent.PinnedHeaderDecoration;
 import com.schrondinger.quin.widget.WaveSideBarView;
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.Button;
 
 import java.util.List;
 
@@ -63,7 +63,7 @@ public class CountryRegionSelectActivity extends BaseMVPActivity<CountryRegionSe
     @Override
     public void onRequestStart(int tag) {
         if (tag == Constants.WAITING){
-            mLoadingView.show();
+//            getMLoadingView().show();
         }
     }
 
@@ -119,7 +119,7 @@ public class CountryRegionSelectActivity extends BaseMVPActivity<CountryRegionSe
                 intent.putExtra("country","美国");
                 intent.putExtra("code","1");
                 setResult(2001,intent);
-                closeActivity();
+                finish();
                 break;
         }
     }

@@ -10,9 +10,9 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:focusable="false"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         android:src="@drawable/tab_type_one_btn">
     </ImageView>
 
@@ -21,10 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="首页"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="1dp"
         android:textColor="@color/tab_text_color"
-        android:textSize="10sp">
+        android:textSize="9sp">
     </TextView>
 
 </LinearLayout>

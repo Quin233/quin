@@ -59,7 +59,7 @@ public class UserInfoActivity extends BaseActivity {
     @Override
     public void initView() {
         super.initView();
-        setBar(mToolbar);
+        setToolBar(mToolbar);
         initViewData();
     }
 
@@ -123,7 +123,7 @@ public class UserInfoActivity extends BaseActivity {
             mUserName.setText(Constants.user.getUserName());
         }
         if (Util.isNullOrEmpty(Constants.user.getUserHeadPhoto())){
-            mUserHead.setImageResource(R.mipmap.head_default);
+            mUserHead.setImageResource(R.drawable.head_default);
         }else {
             Glide.with(this).load(Constants.user.getUserHeadPhoto()).into(mUserHead);
         }

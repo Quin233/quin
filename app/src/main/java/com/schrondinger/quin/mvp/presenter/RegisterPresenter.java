@@ -1,9 +1,14 @@
 package com.schrondinger.quin.mvp.presenter;
 
 
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleOwner;
+
 import com.schrondinger.quin.Utils.Constants;
 import com.schrondinger.quin.bean.Empty;
 import com.schrondinger.quin.mvp.constract.RegisterConstract;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -18,26 +23,26 @@ import io.reactivex.functions.Consumer;
 public class RegisterPresenter extends RegisterConstract.Presenter {
     @Override
     public void register(Map<String, String> sendMap) {
-        mRxManager.add(mModel.register(sendMap).doOnSubscribe(new Consumer() {
+        getMRxManager().add(getMModel().register(sendMap).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                mView.onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.WAITING);
             }
         }).subscribe(new Consumer<Empty>() { // onNext
             @Override
             public void accept(Empty empty) throws Exception {
-                mView.toRegister();
+                getMView().toRegister();
             }
         }, new Consumer<Throwable>() { // onError
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
 
-                mView.onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                mView.onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.WAITING);
             }
         }));
     }

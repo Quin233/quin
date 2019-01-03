@@ -18,25 +18,25 @@ public class CountryRegionSelectPresenter extends CountryRegionSelectConstrct.Pr
 
     @Override
     public void getCountryRegionList(Context context) {
-        mRxManager.add(mModel.getCountryRegionList(context).doOnSubscribe(new Consumer() {
+        getMRxManager().add(getMModel().getCountryRegionList(context).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                mView.onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.WAITING);
             }
         }).subscribe(new Consumer<CountryRegionResult>() { // onNext
             @Override
             public void accept(CountryRegionResult countryRegionResult) throws Exception {
-                mView.updateList(countryRegionResult);
+                getMView().updateList(countryRegionResult);
             }
         }, new Consumer<Throwable>() { // onError
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
-                mView.onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                mView.onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.WAITING);
             }
         }));
     }

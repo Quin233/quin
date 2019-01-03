@@ -23,7 +23,6 @@ import org.json.JSONObject;
 public abstract  class BaseMVPFragment<P extends BasePresenter, M extends BaseModel> extends BaseFragment implements BaseView {
 
     public P mPresenter;
-
     public M mModel;
 //    protected KProgressHUD mKProgressHUD;
 
@@ -33,10 +32,9 @@ public abstract  class BaseMVPFragment<P extends BasePresenter, M extends BaseMo
         super.onCreate(savedInstanceState);
         mPresenter = TUtil.getT(this, 0);
         mModel = TUtil.getT(this, 1);
-        if (this instanceof BaseView) {
+//        if (this instanceof BaseView) {
             mPresenter.setVM(this, mModel);
-        }
-
+//        }
     }
 
 

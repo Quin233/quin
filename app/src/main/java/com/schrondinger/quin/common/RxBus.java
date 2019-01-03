@@ -4,6 +4,9 @@ package com.schrondinger.quin.common;
 import android.support.annotation.NonNull;
 
 import com.orhanobut.logger.Logger;
+import com.schrondinger.quin.base.activity.BaseActivity;
+import com.uber.autodispose.AutoDispose;
+import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
 import java.util.ArrayList;
 import java.util.Collection;

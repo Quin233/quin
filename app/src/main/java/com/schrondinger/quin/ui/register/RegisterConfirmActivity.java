@@ -89,7 +89,7 @@ public class RegisterConfirmActivity extends BaseMVPActivity<RegisterConfirmPres
     @Override
     public void onRequestStart(int tag) {
         if (tag == Constants.WAITING){
-            mLoadingView.show();
+//            getMLoadingView().show();
         }
     }
 
@@ -100,7 +100,7 @@ public class RegisterConfirmActivity extends BaseMVPActivity<RegisterConfirmPres
 
     @Override
     public void updateUI(User user) {
-        toActivity(RegisterResultActivity.class,2);
+        toActivity(RegisterResultActivity.class);
     }
 
     private boolean checkData(){
@@ -108,13 +108,13 @@ public class RegisterConfirmActivity extends BaseMVPActivity<RegisterConfirmPres
         userpwd_t = mEtPwdT.getText().toString().trim();
         TopToast topToast = new TopToast(this);
         if (Util.isNullOrEmpty(userpwd)){
-            topToast.showType(TopToast.Error).setMessageText("请填写密码！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请填写密码！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else if (Util.isNullOrEmpty(userpwd_t)){
-            topToast.showType(TopToast.Error).setMessageText("请再次填写密码！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请再次填写密码！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else if (!userpwd.equals(userpwd_t)){
-            topToast.showType(TopToast.Error).setMessageText("请确认两次输入的密码一致！").duration(2000).show();
+            topToast.showType(TopToast.Error).setMessageText("请确认两次输入的密码一致！").duration(TopToast.LENGTH_SHORT).show();
             return false;
         }else {
             return true;

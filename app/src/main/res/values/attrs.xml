@@ -51,4 +51,14 @@
     <attr name="icvp_page_duration" format="integer"/>
     <attr name="icvp_interpolator" format="reference"/>
 
+    <!-- 自动码表的属性 -->
+    <declare-styleable name="SpeedometerView2">
+        <attr name="mThickTextColor" format="color"/>
+        <attr name="mThickTextSize" format="integer"/>
+        <attr name="mThinTextColor" format="color"/>
+        <attr name="mThinTextSize" format="integer"/>
+        <attr name="mPointerColor" format="color"/>
+        <attr name="mSpeedTextSize" format="integer"/>
+        <attr name="mSpeedTextColor" format="color"/>
+    </declare-styleable>
 </resources>
