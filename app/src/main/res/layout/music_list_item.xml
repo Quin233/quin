@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_music_list"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="50dp">
+
+    <LinearLayout
+        android:paddingStart="@dimen/all_margin_middle"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+
+            android:gravity="bottom"
+            android:textSize="14sp"
+            android:text="Symphony No. 9 - IV. Allegro con fuoco"
+            android:id="@+id/tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/all_margin"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:id="@+id/iv_high_quality"
+                android:src="@drawable/ic_high_quality"
+                android:layout_width="14dp"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:layout_marginStart="@dimen/all_margin"
+                android:gravity="center_vertical"
+                android:textSize="11sp"
+                android:text="Antonín Dvorák - Dvorak:Symphony No. 9 'From the New World' "
+                android:id="@+id/tv_music_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:background="@color/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_marginEnd="@dimen/all_margin_middle"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/more"
+        android:layout_width="25dp"
+        android:layout_height="15dp"/>
+
+</LinearLayout>

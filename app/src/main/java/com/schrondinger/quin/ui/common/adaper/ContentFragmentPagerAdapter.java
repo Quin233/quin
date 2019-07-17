@@ -1,4 +1,4 @@
-package com.schrondinger.quin.ui.mine.adapter;
+package com.schrondinger.quin.ui.common.adaper;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,10 +16,10 @@ import java.util.ArrayList;
  * Created by HP on 2018/1/22.
  */
 
-public class ContentPagerAdapter extends FragmentPagerAdapter {
+public class ContentFragmentPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<CommMap> fragments;
 
-    public ContentPagerAdapter(FragmentManager fm, ArrayList<CommMap> fragments) {
+    public ContentFragmentPagerAdapter(FragmentManager fm, ArrayList<CommMap> fragments) {
         super(fm);
         this.fragments = fragments;
     }

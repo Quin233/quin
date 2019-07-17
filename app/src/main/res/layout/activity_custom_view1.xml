@@ -111,6 +111,10 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
+            
+            <com.schrondinger.quin.ui.other.customview.custom1.XfermodeView
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
 
         </LinearLayout>
     </ScrollView>

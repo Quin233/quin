@@ -62,8 +62,10 @@ public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel
     @Override
     public void initListener() {
         super.initListener();
-        mCountDownView.setCountDownTimerListener(this);
-        mCountDownView.setOnClickListener(this);
+//        mCountDownView.setCountDownTimerListener(this);
+//        mCountDownView.setOnClickListener(this);
+        ((CountDownView)findViewById(R.id.cv_countDownView)).setCountDownTimerListener(this);
+        ((CountDownView)findViewById(R.id.cv_countDownView)).setOnClickListener(this);
     }
 
     @Override
@@ -91,8 +93,10 @@ public class SplashActivity extends BaseMVPActivity<SplashPresenter, SplashModel
                 if (aBoolean){
                     // 检查版本中......
                     // 检查完成！
-                    mCountDownView.setVisibility(View.VISIBLE);
-                    mCountDownView.start(TIMES);
+//                    mCountDownView.setVisibility(View.VISIBLE);
+//                    mCountDownView.start(TIMES);
+                    ((CountDownView)findViewById(R.id.cv_countDownView)).setVisibility(View.VISIBLE);
+                    ((CountDownView)findViewById(R.id.cv_countDownView)).start(TIMES);
                 }else {
                     TopToast topToast = new TopToast(SplashActivity.this);
                     topToast.showType(TopToast.Error).setMessageText("请在手机设置中确认存储、电话权限开启状态。").duration(TopToast.LENGTH_SHORT).show();

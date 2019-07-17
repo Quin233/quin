@@ -32,7 +32,7 @@ public class GsonUtils {
         Logger.d(gson);
         String desContentStr= null;
         try {
-            desContentStr = DESUtil.desEncode(Constants.KEY,Constants.IV,gson);
+            desContentStr = DESUtil.desEncode(Constants.INSTANCE.getKEY(), Constants.INSTANCE.getIV(),gson);
         } catch (Exception e) {
             e.printStackTrace();
         }

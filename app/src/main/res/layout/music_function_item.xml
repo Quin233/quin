@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_music_function"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/img_music_function"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/music_love_list"
+        android:layout_width="23dp"
+        android:layout_height="23dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:text="我的收藏"
+            android:id="@+id/tv_music_function_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <View
+            android:background="@color/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

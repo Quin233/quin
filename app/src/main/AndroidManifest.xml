@@ -19,7 +19,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.main.SplashActivity"
@@ -31,8 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.register.CountryRegionSelectActivity" />
@@ -49,6 +49,18 @@
         <activity android:name=".ui.other.customview.custom2.CustomView2Activity" />
         <activity android:name=".ui.other.customview.custom3.CustomView3Activity" />
         <activity android:name=".ui.other.customview.custom4.CustomView4Activity" />
+        <activity android:name=".ui.music.MusicOfMineActivity" />
+        <activity android:name=".ui.music.MusicOfLocalActivity" />
+        <activity
+            android:name=".ui.music.MusicPlayActivity"
+            android:launchMode="singleTask" />
+
+        <service
+            android:name=".ui.service.QuinMediaPlayerService"
+            android:exported="false" />
+
+        <activity android:name=".ui.game.GameMainActivity" />
+        <activity android:name=".ui.game.GameNBAMainActivity"></activity>
     </application>
 
 </manifest>

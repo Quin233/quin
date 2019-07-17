@@ -24,7 +24,7 @@ import com.schrondinger.quin.Utils.Util;
 import com.schrondinger.quin.base.activity.ActivityInject;
 import com.schrondinger.quin.base.activity.BaseActivity;
 import com.schrondinger.quin.bean.common.CommMap;
-import com.schrondinger.quin.ui.mine.adapter.ContentPagerAdapter;
+import com.schrondinger.quin.ui.common.adaper.ContentFragmentPagerAdapter;
 import com.schrondinger.quin.ui.mine.fragment.MineOneFragment;
 import com.schrondinger.quin.ui.mine.fragment.MineThreeFragment;
 import com.schrondinger.quin.ui.mine.fragment.MineTwoFragment;
@@ -70,7 +70,7 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
 //    private String[] tabIndecators = {"主页","动态","收藏"};
     private ArrayList<CommMap> tabIndecators = new ArrayList<>();
     private Fragment[] tabFragments = {MineOneFragment.newInstance(), MineTwoFragment.newInstance(), MineThreeFragment.newInstance()};
-    private ContentPagerAdapter contentPagerAdapter;
+    private ContentFragmentPagerAdapter contentFragmentPagerAdapter;
     private CollapsingToolbarLayoutState state;
 
     @Override
@@ -104,8 +104,8 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
     }
 
     private void initContent(){
-        contentPagerAdapter = new ContentPagerAdapter(getSupportFragmentManager(),tabIndecators);
-        mContentVp.setAdapter(contentPagerAdapter);
+        contentFragmentPagerAdapter = new ContentFragmentPagerAdapter(getSupportFragmentManager(),tabIndecators);
+        mContentVp.setAdapter(contentFragmentPagerAdapter);
         mContentVp.setCurrentItem(0);
         mContentVp.setOffscreenPageLimit(tabIndecators.size());
     }
@@ -117,26 +117,26 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
     }
 
     private void initText(){
-        if (Util.isNullOrEmpty(Constants.user.getUserName())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getUserName())){
             mUserName.setText("竟然还没有名字");
         }else{
-            mUserName.setText(Constants.user.getUserName());
+            mUserName.setText(Constants.INSTANCE.getUser().getUserName());
         }
-        if (Constants.user.getUserType().equals("Admin")){
+        if (Constants.INSTANCE.getUser().getUserType().equals("Admin")){
             mUserType.setText("超级管理员");
         }else {
             mUserType.setText("普通会员");
         }
-        if (Util.isNullOrEmpty(Constants.user.getUserHeadPhoto())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getUserHeadPhoto())){
             mUserHead.setImageResource(R.drawable.head_default);
         }else {
-            Glide.with(this).load(Constants.user.getUserHeadPhoto()).into(mUserHead);
+            Glide.with(this).load(Constants.INSTANCE.getUser().getUserHeadPhoto()).into(mUserHead);
         }
-        if (Util.isNullOrEmpty(Constants.user.getGender())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getGender())){
             mUserGender.setImageResource(R.drawable.mix_gender);
-        } else if (Constants.user.getGender().equals("F")){
+        } else if (Constants.INSTANCE.getUser().getGender().equals("F")){
             mUserGender.setImageResource(R.drawable.female);
-        }else if (Constants.user.getGender().equals("M")){
+        }else if (Constants.INSTANCE.getUser().getGender().equals("M")){
             mUserGender.setImageResource(R.drawable.man);
         }else{
             mUserGender.setImageResource(R.drawable.mix_gender);
@@ -147,10 +147,10 @@ public class MineActivity extends BaseActivity implements AppBarLayout.OnOffsetC
         string.setSpan(colorSpan1, 0, string.length()-3, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         string.setSpan(colorSpan2, string.length()-2, string.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         mUserArticle.setText(string);
-        if (Util.isNullOrEmpty(Constants.user.getInfo())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getInfo())){
             mUserSignature.setText("这个人很懒，什么都没有写。");
         }else{
-            mUserSignature.setText(Constants.user.getInfo());
+            mUserSignature.setText(Constants.INSTANCE.getUser().getInfo());
         }
     }
 

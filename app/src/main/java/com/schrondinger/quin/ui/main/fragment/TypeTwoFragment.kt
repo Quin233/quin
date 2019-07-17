@@ -1,26 +1,24 @@
 package com.schrondinger.quin.ui.main.fragment
 
 
-import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.view.View
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.schrondinger.quin.R
 import com.schrondinger.quin.base.activity.ActivityInject
 import com.schrondinger.quin.base.activity.BaseFragment
 import com.schrondinger.quin.bean.common.CommMap
 import com.schrondinger.quin.ui.main.MainActivity
-import com.schrondinger.quin.ui.mine.adapter.ContentPagerAdapter
+import com.schrondinger.quin.ui.common.adaper.ContentFragmentPagerAdapter
 import com.schrondinger.quin.ui.mine.fragment.MineOneFragment
+import com.schrondinger.quin.ui.music.fragment.MusicFragment
 import kotlinx.android.synthetic.main.fragment_type_two.*
 
 @ActivityInject(rootViewId = R.layout.fragment_type_two)
 class TypeTwoFragment : BaseFragment() {
 
     private lateinit var tabList:ArrayList<CommMap>
-    private var contentPagerAdapter: ContentPagerAdapter? = null
+    private var contentFragmentPagerAdapter: ContentFragmentPagerAdapter? = null
     private lateinit var tabFragments: Array<Fragment?>
 
     override fun initData() {
@@ -33,7 +31,7 @@ class TypeTwoFragment : BaseFragment() {
                 CommMap("漫画",MineOneFragment::class.java.name),
                 CommMap("专栏",MineOneFragment::class.java.name),
                 CommMap("直播",MineOneFragment::class.java.name),
-                CommMap("音频",MineOneFragment::class.java.name),
+                CommMap("音频", MusicFragment::class.java.name),
                 CommMap("游戏",MineOneFragment::class.java.name))
 
         tabFragments = kotlin.arrayOfNulls(tabList.size)
@@ -65,8 +63,8 @@ class TypeTwoFragment : BaseFragment() {
     }
 
     private fun initViewPager(){
-        contentPagerAdapter = ContentPagerAdapter(childFragmentManager, tabList)
-        vp_content.adapter = contentPagerAdapter
+        contentFragmentPagerAdapter = ContentFragmentPagerAdapter(childFragmentManager, tabList)
+        vp_content.adapter = contentFragmentPagerAdapter
         vp_content.currentItem = 0
         vp_content.offscreenPageLimit = tabFragments.size
     }

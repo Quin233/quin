@@ -175,7 +175,7 @@ open class BaseActivity : SupportActivity(), BaseFunction, View.OnClickListener 
             setSupportActionBar(toolBar)
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             supportActionBar!!.setDisplayShowHomeEnabled(true)
-            toolBar.title = ""
+//            toolBar.title = ""
             toolBar.setNavigationOnClickListener { finish() }
         }
     }

@@ -52,7 +52,7 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> 
             }
             JSONObject jsonObject=new JSONObject(response);
             // 解密
-            jsonObject=new JSONObject(DESUtil.decodeValue(Constants.KEY, Constants.IV,jsonObject.optString("content")));
+            jsonObject=new JSONObject(DESUtil.decodeValue(Constants.INSTANCE.getKEY(), Constants.INSTANCE.getIV(),jsonObject.optString("content")));
             //过滤一些重复字段
 //            jsonObject= GsonUtils.resolveResponse(jsonObject);
 

@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.schrondinger.quin.R
+import com.schrondinger.quin.bean.common.CommItem
+import com.schrondinger.quin.bean.common.MenuItem
 import java.util.ArrayList
 
 /**
@@ -21,13 +23,13 @@ import java.util.ArrayList
  */
 class OtherFunctionAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    var recyclerItemList = ArrayList<MenuItem>()
+    var recyclerItemList = ArrayList<MenuItem<Any>>()
 
     val ITEM_TYPE_TITLE = 0
     val ITEM_TYPE_MENU = 1
     val ITEM_TYPE_DIVIDER = 2
 
-    constructor(recyclerItemList: ArrayList<MenuItem>){
+    constructor(recyclerItemList: ArrayList<MenuItem<Any>>){
         this.recyclerItemList = recyclerItemList
     }
 
@@ -58,20 +60,20 @@ class OtherFunctionAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder> {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val menuItem = recyclerItemList[position]
         if (holder is TitleViewHolder) {
-            holder.tv_function_title.text = menuItem.text
+            holder.tv_function_title.text = (menuItem.data as CommItem).text
         } else if (holder is MenuViewHolder) {
-            holder.iv_icon.setImageResource(menuItem.iconId)
-            holder.tv_text.text = menuItem.text
+            holder.iv_icon.setImageResource((menuItem.data as CommItem).resource)
+            holder.tv_text.text = menuItem.data.text
             //
-            when(menuItem.text){
-                "财富智投","哈哈哈"->{
+            when(menuItem.data.text){
+                "新产品1","新产品2"->{
                     holder.iv_new.visibility = View.VISIBLE
                 }
                 else->{
                     holder.iv_new.visibility = View.GONE
                 }
             }
-            holder.rl_menu.setOnClickListener { v -> mOnMenuItemClickListener?.onMenuClick(v, menuItem) }
+            holder.rl_menu.setOnClickListener { v -> mOnMenuItemClickListener?.onMenuClick(v, position) }
         }
     }
 
@@ -117,7 +119,7 @@ class OtherFunctionAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder> {
     class DividerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     interface OnMenuItemClickListener {
-        fun onMenuClick(view: View, data: MenuItem)
+        fun onMenuClick(view: View, position: Int)
     }
 
     private var mOnMenuItemClickListener: OnMenuItemClickListener? = null

@@ -1,9 +1,11 @@
 package com.schrondinger.quin.ui.other.customview.custom4
 
+import android.view.View
 import com.schrondinger.quin.R
 import com.schrondinger.quin.base.activity.ActivityInject
 import com.schrondinger.quin.base.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_custom_view4.*
+import kotlinx.android.synthetic.main.item_allshopitemview.*
 
 @ActivityInject(rootViewId = R.layout.activity_custom_view4)
 class CustomView4Activity : BaseActivity() {
@@ -45,6 +47,31 @@ class CustomView4Activity : BaseActivity() {
                 arrayOf("E级","200"),
                 arrayOf("F级","177"))
         pc_pie_chart.setData(dataList2)
+    }
+
+    override fun initListener() {
+        super.initListener()
+        bt_start.setOnClickListener(this)
+        bt_pause.setOnClickListener(this)
+        bt_resume.setOnClickListener(this)
+        bt_end.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View) {
+        when(v.id){
+            R.id.bt_start->{
+                pv_phonograph.start()
+            }
+            R.id.bt_pause->{
+                pv_phonograph.pause()
+            }
+            R.id.bt_resume->{
+                pv_phonograph.resume()
+            }
+            R.id.bt_end->{
+                pv_phonograph.stop()
+            }
+        }
     }
 
 

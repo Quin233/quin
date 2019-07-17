@@ -28,6 +28,7 @@ import com.schrondinger.quin.Utils.Util;
 import com.schrondinger.quin.base.activity.ActivityInject;
 import com.schrondinger.quin.base.activity.BaseActivity;
 import com.schrondinger.quin.common.RxManager;
+import com.schrondinger.quin.ui.game.GameMainActivity;
 import com.schrondinger.quin.ui.login.LoginActivity;
 import com.schrondinger.quin.ui.main.fragment.DrawerBaseFragment;
 import com.schrondinger.quin.ui.main.fragment.TypeOneFragment;
@@ -160,10 +161,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                if (Constants.loginState){
-                    Util.loadImage(mUserHeadIcon,Constants.user.getUserHeadPhoto(),MainActivity.this);
-                    mUserName.setText(Constants.user.getUserName());
-                    mUserInfo.setText(Constants.user.getUserPhone());
+                if (Constants.INSTANCE.getLoginState()){
+                    Util.loadImage(mUserHeadIcon, Constants.INSTANCE.getUser().getUserHeadPhoto(),MainActivity.this);
+                    mUserName.setText(Constants.INSTANCE.getUser().getUserName());
+                    mUserInfo.setText(Constants.INSTANCE.getUser().getUserPhone());
                 }
             }
         };
@@ -196,9 +197,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             case R.id.nav_home:
                 mDrawerLayout.closeDrawers(); // 关闭导航菜单
                 break;
-            case R.id.nav_send:
-                Bundle bundle = new Bundle();
-                toActivity(bundle,OtherFunctionActivity.class);
+            case R.id.nav_game:
+                toActivity(GameMainActivity.class);
                 break;
             case R.id.nav_function:
                 toActivity(OtherFunctionActivity.class);
@@ -218,12 +218,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void checkIsLogin(){
-        if (!Constants.loginState){
+        if (!Constants.INSTANCE.getLoginState()){
             mTabHost.setCurrentTab(0);
-            if (SpUtil.getString(SpUtil.ISLODINSELF).equals("YES")){
-                // 自动登陆
-
-            }else {
+//            if (SpUtil.getString(SpUtil.ISLODINSELF).equals("YES")){
+//                // 自动登陆
+//
+//            }else {
                 SchrodingerDialog.confirmDialog(this, "是否要登陆？", "您还未登陆QUIN，为了您更好的体验该App，请登陆或注册后登陆~", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -233,7 +233,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 }, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) { }});
-            }
+//            }
         }
     }
 

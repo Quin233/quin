@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ui.register.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/music_of_mine"
+        app:titleTextColor="@color/colorWhite"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_half_trans_corner"
+                    android:layout_margin="@dimen/all_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp">
+
+                        <com.schrondinger.quin.widget.CircleImageView
+                            android:src="@drawable/head_default"
+                            android:id="@+id/img_user_head"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/all_margin_middle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_marginStart="@dimen/all_margin"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/img_user_head"
+                            android:text="Miss_Quin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/img_user_level"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/tv_user_name"
+                            android:layout_marginStart="@dimen/all_margin"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/all_margin_middle"
+                            android:layout_alignParentEnd="true"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:paddingStart="@dimen/all_margin_middle"
+                            android:paddingEnd="@dimen/all_margin_middle"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:text="@string/music_open_prime"
+                            android:background="@drawable/bg_primary_corner_trans_inner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginLeft="@dimen/all_margin"
+                        android:layout_marginRight="@dimen/all_margin"
+                        android:background="@color/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_music_notice"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:textColor="@color/colorPrimary"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:background="@drawable/bg_primary_squre_trans_inner"
+                            android:layout_marginStart="@dimen/all_margin_middle"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tv_music_notice_type"
+                            android:textSize="11sp"
+                            android:text="福利"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="13sp"
+                            android:text="黑胶VIP送你三重礼"
+                            android:id="@+id/tv_music_notice_content"
+                            android:layout_marginStart="@dimen/all_margin"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/check"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/fragmentation_ic_right"
+                            android:layout_marginEnd="@dimen/all_margin_middle"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/colorWhite"
+                android:id="@+id/ry_music_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_marginTop="-1dp"
+                android:background="@color/divider"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <com.schrondinger.quin.widget.FoldRightArrow
+                    android:padding="12dp"
+                    android:layout_marginStart="@dimen/all_margin_middle"
+                    android:id="@+id/fr_created_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_created_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/all_margin_middle"
+                    android:textSize="12sp"
+                    android:text="创建的歌单(3)"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/img_created_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/all_margin"
+                    android:src="@drawable/music_list_more_function"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/colorWhite"
+                android:id="@+id/ry_music_created_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_marginTop="-1dp"
+                android:background="@color/divider"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <com.schrondinger.quin.widget.FoldRightArrow
+                    android:layout_marginStart="@dimen/all_margin_middle"
+                    android:id="@+id/fr_love_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_love_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/all_margin_middle"
+                    android:textSize="12sp"
+                    android:text="收藏的歌单(3)"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/img_love_list"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/all_margin"
+                    android:src="@drawable/music_list_more_function"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginBottom="@dimen/all_margin"
+                android:background="@color/colorWhite"
+                android:id="@+id/ry_music_love_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <include layout="@layout/include_music_play" />
+
+
+</LinearLayout>

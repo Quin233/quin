@@ -66,7 +66,7 @@ public abstract  class BaseMVPFragment<P extends BasePresenter, M extends BaseMo
                 if (jsonObject.optString("errorcode").equals("role.invalid_user")){//会话超时
                     //清除session信息
                     SpUtil.clearCookies();
-                    Constants.loginState=false;
+                    Constants.INSTANCE.setLoginState(false);
 
                     RxManager rxManager=new RxManager();
                     rxManager.post(RxManager.ISLOGIN,new User());

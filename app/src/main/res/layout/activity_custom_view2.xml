@@ -107,6 +107,11 @@
                 android:layout_width="100dp"
                 android:layout_height="45dp" />
 
+
+            <com.schrondinger.quin.ui.other.customview.custom2.CIrcleImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
         </LinearLayout>
     </ScrollView>
 

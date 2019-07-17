@@ -88,7 +88,7 @@ public class RegisterConfirmActivity extends BaseMVPActivity<RegisterConfirmPres
 
     @Override
     public void onRequestStart(int tag) {
-        if (tag == Constants.WAITING){
+        if (tag == Constants.INSTANCE.getWAITING()){
 //            getMLoadingView().show();
         }
     }

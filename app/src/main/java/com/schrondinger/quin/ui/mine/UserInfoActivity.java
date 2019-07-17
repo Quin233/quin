@@ -104,7 +104,7 @@ public class UserInfoActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 SpUtil.clearCookies();
-                Constants.loginState = false;
+                Constants.INSTANCE.setLoginState(false);
                 App.getInstance().removeActivity(2);
                 //post订阅事件
                 mRxManager = new RxManager();
@@ -117,30 +117,30 @@ public class UserInfoActivity extends BaseActivity {
     }
 
     private void initViewData(){
-        if (Util.isNullOrEmpty(Constants.user.getUserName())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getUserName())){
             mUserName.setText("竟然还没有名字");
         }else{
-            mUserName.setText(Constants.user.getUserName());
+            mUserName.setText(Constants.INSTANCE.getUser().getUserName());
         }
-        if (Util.isNullOrEmpty(Constants.user.getUserHeadPhoto())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getUserHeadPhoto())){
             mUserHead.setImageResource(R.drawable.head_default);
         }else {
-            Glide.with(this).load(Constants.user.getUserHeadPhoto()).into(mUserHead);
+            Glide.with(this).load(Constants.INSTANCE.getUser().getUserHeadPhoto()).into(mUserHead);
         }
-        if (Util.isNullOrEmpty(Constants.user.getGender())){
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getGender())){
             mUserGender.setText("");
-        } else if (Constants.user.getGender().equals("F")){
+        } else if (Constants.INSTANCE.getUser().getGender().equals("F")){
             mUserGender.setText("女");
-        }else if (Constants.user.getGender().equals("M")){
+        }else if (Constants.INSTANCE.getUser().getGender().equals("M")){
             mUserGender.setText("男");
         }else{
             mUserGender.setText("");
         }
-        mUserId.setText(Constants.user.getUid()+"");
-        if (Util.isNullOrEmpty(Constants.user.getInfo())){
+        mUserId.setText(Constants.INSTANCE.getUser().getUid()+"");
+        if (Util.isNullOrEmpty(Constants.INSTANCE.getUser().getInfo())){
             mUserSignature.setText("这个人很懒，什么都没有写。");
         }else{
-            mUserSignature.setText(Constants.user.getInfo());
+            mUserSignature.setText(Constants.INSTANCE.getUser().getInfo());
         }
     }
 

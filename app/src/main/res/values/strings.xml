@@ -7,6 +7,7 @@
     <string name="storage_permissions">存储空间</string>
     <string name="device_info_permissions">设备信息</string>
     <string name="location_info_permissions">位置信息</string>
+    <string name="check">查看</string>
     <string name="next_step">下一步</string>
 
     <!-- MainActivity -->
@@ -50,6 +51,11 @@
     <string name="user_head_zoom">仅缩放</string>
     <string name="user_head_rotate">仅旋转</string>
 
+    <!-- 音乐 -->
+    <string name="music_of_mine">我的音乐</string>
+    <string name="music_of_local">本地音乐</string>
+    <string name="music_open_prime">开通会员</string>
+
 
     <!-- dialog -->
     <string name="head_select">头像选择</string>
@@ -60,4 +66,21 @@
     <!-- 其它 -->
     <string name="other_function">其它功能</string>
     <string name="other_custom_view">自定义View</string>
+
+    <!-- 游戏 -->
+    <string name="game_main">游戏</string>
+
+    <string-array name="right_title_name">
+        <item>姓名</item>
+        <item>定位</item>
+        <item>年龄</item>
+        <item>评分</item>
+        <item>篮下进攻</item>
+        <item>中距离进攻</item>
+        <item>远距离进攻</item>
+        <item>篮下防守</item>
+        <item>中距离防守</item>
+        <item>远距离防守</item>
+    </string-array>
+
 </resources>

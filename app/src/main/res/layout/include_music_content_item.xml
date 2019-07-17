@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rl_content"
+    android:padding="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:src="@drawable/bg_default_music"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="1dp"
+        android:layout_toStartOf="@+id/tv_music_number"
+        android:id="@+id/iv_headset"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_headset" />
+    <TextView
+        android:layout_marginRight="@dimen/all_margin"
+        android:textSize="9sp"
+        android:id="@+id/tv_music_number"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_bg"
+        android:layout_marginTop="@dimen/all_margin"/>
+
+    <TextView
+        android:textColor="@color/second_color"
+        android:textSize="10sp"
+        android:id="@+id/tv_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text1"/>
+</RelativeLayout>

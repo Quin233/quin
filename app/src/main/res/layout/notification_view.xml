@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_custom_song_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        
+        <TextView
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Info"
+            android:id="@+id/tv_custom_song_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Info"
+            android:id="@+id/tv_custom_song_artist"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_custom_song_status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_custom_song_next"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

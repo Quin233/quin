@@ -2,14 +2,10 @@ package com.schrondinger.quin.ui.other.customview.custom3
 
 import android.animation.ObjectAnimator
 import android.content.Context
-import android.content.res.Resources
-import android.util.AttributeSet
-import android.view.View
-import com.schrondinger.quin.R
-import android.content.res.TypedArray
 import android.graphics.*
-import android.util.Log
+import android.util.AttributeSet
 import android.view.MotionEvent
+import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 
 /**

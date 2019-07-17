@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:layout_marginLeft="@dimen/all_margin"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/img_music"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:text="未完成的播放界面"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:layout_marginLeft="@dimen/all_margin"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/img_music_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <ImageView
+        android:layout_marginLeft="@dimen/all_margin"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/img_music_love"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+</LinearLayout>

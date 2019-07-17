@@ -71,7 +71,7 @@ public class RetrofitHelper {
             builder.addInterceptor(loggingInterceptor);
         }
 
-        File cacheFile = new File(Constants.PATH_CACHE);
+        File cacheFile = new File(Constants.INSTANCE.getPATH_CACHE());
         Cache cache = new Cache(cacheFile, 1024 * 1024 * 50);
         Interceptor cacheInterceptor = new Interceptor() {
             @Override

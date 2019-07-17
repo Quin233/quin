@@ -22,14 +22,14 @@ public class LoginPresenter extends LoginConstract.Presenter {
         getMRxManager().add(getMModel().login(sendMap).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                getMView().onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.INSTANCE.getWAITING());
             }
         }).subscribe(new Consumer<User>() { // onNext
             @Override
             public void accept(User user) throws Exception {
                 // 保存个人信息
-                Constants.user = user;
-                Constants.loginState=true;
+                Constants.INSTANCE.setUser(user);
+                Constants.INSTANCE.setLoginState(true);
                 // 保存用户
                 SpUtil.setString(SpUtil.USERNAME, user.getUserName());
                 SpUtil.setString(SpUtil.USERPHONE, user.getUserPhone());
@@ -42,12 +42,12 @@ public class LoginPresenter extends LoginConstract.Presenter {
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
 
-                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.INSTANCE.getWAITING(),throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                getMView().onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.INSTANCE.getWAITING());
             }
         }));
     }

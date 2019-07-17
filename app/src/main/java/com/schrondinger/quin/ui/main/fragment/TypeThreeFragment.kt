@@ -14,7 +14,7 @@ import com.schrondinger.quin.mvp.constract.DrawerBaseFragmentContract
 import com.schrondinger.quin.mvp.model.DrawerBaseFragmentModel
 import com.schrondinger.quin.mvp.presenter.DrawerBaseFragmentPresenter
 import com.schrondinger.quin.ui.main.MainActivity
-import com.schrondinger.quin.ui.mine.adapter.ContentPagerAdapter
+import com.schrondinger.quin.ui.common.adaper.ContentFragmentPagerAdapter
 import com.schrondinger.quin.ui.mine.fragment.MineOneFragment
 import kotlinx.android.synthetic.main.fragment_type_three.*
 
@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_type_three.*
 class TypeThreeFragment : BaseMVPFragment<DrawerBaseFragmentPresenter, DrawerBaseFragmentModel>(), DrawerBaseFragmentContract.View {
 
     private lateinit var tabList:ArrayList<CommMap>
-    private var contentPagerAdapter: ContentPagerAdapter? = null
+    private var contentFragmentPagerAdapter: ContentFragmentPagerAdapter? = null
     private lateinit var tabFragments: Array<Fragment?>
 
     override fun initData() {
@@ -60,8 +60,8 @@ class TypeThreeFragment : BaseMVPFragment<DrawerBaseFragmentPresenter, DrawerBas
     }
 
     private fun initViewPager(){
-        contentPagerAdapter = ContentPagerAdapter(childFragmentManager, tabList)
-        vp_content.adapter = contentPagerAdapter
+        contentFragmentPagerAdapter = ContentFragmentPagerAdapter(childFragmentManager, tabList)
+        vp_content.adapter = contentFragmentPagerAdapter
         vp_content.currentItem = 0
         vp_content.offscreenPageLimit = tabFragments.size
     }

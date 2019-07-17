@@ -6,7 +6,8 @@ import android.view.View
 import com.schrondinger.quin.R
 import com.schrondinger.quin.base.activity.ActivityInject
 import com.schrondinger.quin.base.activity.BaseActivity
-import com.schrondinger.quin.ui.other.adapter.MenuItem
+import com.schrondinger.quin.bean.common.CommItem
+import com.schrondinger.quin.bean.common.MenuItem
 import com.schrondinger.quin.ui.other.adapter.OtherFunctionAdapter
 import com.schrondinger.quin.ui.other.customview.custom1.CustomView1Activity
 import com.schrondinger.quin.ui.other.customview.custom2.CustomView2Activity
@@ -18,7 +19,7 @@ import java.util.*
 @ActivityInject(rootViewId = R.layout.activity_custom_view)
 class CustomViewActivity : BaseActivity() {
 
-    var allFunctionItems = ArrayList<MenuItem>()
+    var allFunctionItems = ArrayList<MenuItem<Any>>()
     lateinit var linearLayoutManager: GridLayoutManager
     lateinit var mAdapter: OtherFunctionAdapter
 
@@ -30,10 +31,10 @@ class CustomViewActivity : BaseActivity() {
     override fun initLoad() {
         super.initLoad()
         // 初始化数据源
-        allFunctionItems.add(MenuItem(R.drawable.icon_all_fund,"统计图", CustomView4Activity::class.java.name,false,OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
-        allFunctionItems.add(MenuItem(R.drawable.icon_all_fund,"百分比", CustomView3Activity::class.java.name,false,OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
-        allFunctionItems.add(MenuItem(R.drawable.icon_all_fund,"基础二", CustomView2Activity::class.java.name,false,OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
-        allFunctionItems.add(MenuItem(R.drawable.icon_all_fund,"基础一", CustomView1Activity::class.java.name,false,OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
+        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "统计图", CustomView4Activity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
+        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "百分比", CustomView3Activity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
+        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "基础二", CustomView2Activity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
+        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "基础一", CustomView1Activity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
 
         // 设置列表样式
         linearLayoutManager = GridLayoutManager(this, 4)
@@ -50,9 +51,10 @@ class CustomViewActivity : BaseActivity() {
         // 将adapter设置到ry中
         mRecyclerView.adapter = mAdapter
         mAdapter.setOnMenuItemClickListener(object :OtherFunctionAdapter.OnMenuItemClickListener{
-            override fun onMenuClick(view: View, data: MenuItem) {
+            override fun onMenuClick(view: View, position: Int) {
+                var data = allFunctionItems[position]
                 try {
-                    val clazz = Class.forName(data.activity) as Class<BaseActivity>
+                    val clazz = Class.forName((data.data as CommItem).activity) as Class<BaseActivity>
                     toActivity(clazz)
                 }catch (e:ClassNotFoundException){}
             }

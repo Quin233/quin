@@ -21,7 +21,7 @@ public class CountryRegionSelectPresenter extends CountryRegionSelectConstrct.Pr
         getMRxManager().add(getMModel().getCountryRegionList(context).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                getMView().onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.INSTANCE.getWAITING());
             }
         }).subscribe(new Consumer<CountryRegionResult>() { // onNext
             @Override
@@ -31,12 +31,12 @@ public class CountryRegionSelectPresenter extends CountryRegionSelectConstrct.Pr
         }, new Consumer<Throwable>() { // onError
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
-                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.INSTANCE.getWAITING(),throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                getMView().onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.INSTANCE.getWAITING());
             }
         }));
     }

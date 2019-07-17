@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/transparent"
+    android:layout_height="64dp">
+
+    <ImageView
+        android:src="@color/colorPrimary"
+        android:id="@+id/iv_custom_song_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+    
+    <LinearLayout
+        android:layout_marginLeft="@dimen/all_margin_large"
+        android:orientation="vertical"
+        android:layout_weight="6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        
+        <TextView
+            android:textSize="17dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="qasdasdsadasdasdaasdsa"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            android:id="@+id/tv_custom_song_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周杰伦"
+            android:lines="1"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            android:id="@+id/tv_custom_song_artist"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/all_margin_large_x"
+        android:src="@drawable/music_pause_primary"
+        android:id="@+id/iv_custom_song_status"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/all_margin_large_x"
+        android:src="@drawable/music_next_primary"
+        android:id="@+id/iv_custom_song_next"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/all_margin_large"
+        android:src="@drawable/music_close"
+        android:id="@+id/iv_custom_song_close"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="25dp" />
+
+</LinearLayout>

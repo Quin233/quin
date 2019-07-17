@@ -14,6 +14,7 @@
     <color name="hint_color">#bbbbbb</color>
     <color name="home_bg">#f8f8f8</color>
     <color name="divider">#e5e5e5</color>
+    <color name="divider2">#F9F9F9</color>
 
     <color name="item_color_black">#333333</color>
 </resources>

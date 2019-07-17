@@ -8,14 +8,14 @@ import com.schrondinger.quin.base.activity.ActivityInject
 import com.schrondinger.quin.base.activity.BaseFragment
 import com.schrondinger.quin.bean.common.CommMap
 import com.schrondinger.quin.ui.main.MainActivity
-import com.schrondinger.quin.ui.mine.adapter.ContentPagerAdapter
+import com.schrondinger.quin.ui.common.adaper.ContentFragmentPagerAdapter
 import com.schrondinger.quin.ui.mine.fragment.MineOneFragment
 import kotlinx.android.synthetic.main.fragment_type_one.*
 
 @ActivityInject(rootViewId = R.layout.fragment_type_one)
 class TypeOneFragment : BaseFragment() {
     private lateinit var tabList:ArrayList<CommMap>
-    private var contentPagerAdapter: ContentPagerAdapter? = null
+    private var contentFragmentPagerAdapter: ContentFragmentPagerAdapter? = null
     private lateinit var tabFragments: Array<Fragment?>
 
     override fun initData() {
@@ -53,8 +53,8 @@ class TypeOneFragment : BaseFragment() {
     }
 
     private fun initViewPager(){
-        contentPagerAdapter = ContentPagerAdapter(childFragmentManager, tabList)
-        vp_content.adapter = contentPagerAdapter
+        contentFragmentPagerAdapter = ContentFragmentPagerAdapter(childFragmentManager, tabList)
+        vp_content.adapter = contentFragmentPagerAdapter
         vp_content.currentItem = 0
         vp_content.offscreenPageLimit = tabFragments.size
     }

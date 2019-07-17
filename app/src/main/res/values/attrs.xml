@@ -61,4 +61,9 @@
         <attr name="mSpeedTextSize" format="integer"/>
         <attr name="mSpeedTextColor" format="color"/>
     </declare-styleable>
+
+    <!-- 唱片机的属性 -->
+    <declare-styleable name="PhonographView">
+        <attr name="mSrc" format="integer"/>
+    </declare-styleable>
 </resources>

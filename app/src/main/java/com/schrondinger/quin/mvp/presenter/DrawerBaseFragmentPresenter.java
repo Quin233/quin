@@ -20,7 +20,7 @@ public class DrawerBaseFragmentPresenter extends DrawerBaseFragmentContract.Pres
         getMRxManager().add(getMModel().getUserInfo(sendMap).doOnSubscribe(new Consumer() {
             @Override
             public void accept(@NonNull Object o) throws Exception {
-                getMView().onRequestStart(Constants.WAITING);
+                getMView().onRequestStart(Constants.INSTANCE.getWAITING());
             }
         }).subscribe(new Consumer<User>() { // onNext
             @Override
@@ -31,12 +31,12 @@ public class DrawerBaseFragmentPresenter extends DrawerBaseFragmentContract.Pres
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
 
-                getMView().onRequestError(Constants.WAITING,throwable.getLocalizedMessage());
+                getMView().onRequestError(Constants.INSTANCE.getWAITING(),throwable.getLocalizedMessage());
             }
         }, new Action() { // onComplete
             @Override
             public void run() throws Exception {
-                getMView().onRequestEnd(Constants.WAITING);
+                getMView().onRequestEnd(Constants.INSTANCE.getWAITING());
             }
         }));
     }

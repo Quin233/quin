@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.register.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/music_of_mine"
+        app:titleTextColor="@color/colorWhite"/>
+
+
+    <FrameLayout
+        android:id="@+id/fl_content_default"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <include layout="@layout/music_play_image"/>
+    </FrameLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/fl_content_lyc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <include layout="@layout/music_play_lyc"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/all_margin_middle"
+        android:layout_marginEnd="@dimen/all_margin_middle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorWhite"
+            android:text="00:00"
+            android:id="@+id/tv_currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <SeekBar
+            android:thumb="@drawable/seek_bar_thumb"
+            android:id="@+id/sb_playSeekBar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:text="00:00"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_totalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/all_margin"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/all_margin"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_play_type"
+            android:src="@drawable/music_play_list"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:layout_marginLeft="@dimen/all_margin"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_play_pre"
+            android:src="@drawable/music_play_pre"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+        <ImageView
+            android:layout_marginLeft="@dimen/all_margin"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_play_status"
+            android:src="@drawable/music_pause"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:layout_marginLeft="@dimen/all_margin"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_play_next"
+            android:src="@drawable/music_play_next"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+        <ImageView
+            android:layout_marginLeft="@dimen/all_margin"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_show_list"
+            android:src="@drawable/music_show_list"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

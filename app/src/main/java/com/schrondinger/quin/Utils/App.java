@@ -11,8 +11,12 @@ import android.view.WindowManager;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 import com.schrondinger.quin.BuildConfig;
+import com.xye.realmindextest.MyRealmModule;
 
 import java.util.Stack;
+
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class App extends Application {
     private static App instance;
@@ -48,6 +52,10 @@ public class App extends Application {
             Logger.init(getPackageName()).hideThreadInfo().logLevel(LogLevel.NONE);
         }
 
+        // 初始化Relam
+        Realm.init(this);
+        RealmConfiguration myConfig =new RealmConfiguration.Builder().modules(Realm.getDefaultModule(), new MyRealmModule()).build();
+        Realm.setDefaultConfiguration(myConfig);
 
         //初始化内存泄漏检测
 //        LeakCanary.install(this);
