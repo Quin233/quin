@@ -95,20 +95,17 @@ public class ProtocolActivity extends BaseActivity {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-            // TODO Auto-generated method stub
             super.onPageFinished(view, url);
         }
 
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            // TODO Auto-generated method stub
             super.onPageStarted(view, url, favicon);
         }
 
         @Override
         public void onReceivedError(WebView view, int errorCode,
                                     String description, String failingUrl) {
-            // TODO Auto-generated method stub
             super.onReceivedError(view, errorCode, description, failingUrl);
         }
 

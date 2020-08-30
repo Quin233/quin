@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".Utils.App"
@@ -20,6 +21,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
+        <activity android:name=".base.activity.MainActivity"></activity>
+        <activity android:name=".ui.other.encryto.EncrytoActivity" />
         <activity
             android:name=".ui.main.SplashActivity"
             android:screenOrientation="portrait"
@@ -60,7 +63,7 @@
             android:exported="false" />
 
         <activity android:name=".ui.game.GameMainActivity" />
-        <activity android:name=".ui.game.GameNBAMainActivity"></activity>
+        <activity android:name=".ui.game.GameNBAMainActivity" />
     </application>
 
 </manifest>

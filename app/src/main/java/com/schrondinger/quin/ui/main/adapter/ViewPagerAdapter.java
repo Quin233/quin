@@ -38,13 +38,11 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        // TODO Auto-generated method stub
         container.removeView(views.get(position));
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        // TODO Auto-generated method stub
         container.addView(views.get(position));
         ImageView iv_welcome=views.get(position).findViewById(R.id.iv_welcome);
         Util.loadImage(iv_welcome,imgs[position],context);

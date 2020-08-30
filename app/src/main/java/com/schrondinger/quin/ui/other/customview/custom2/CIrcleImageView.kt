@@ -46,6 +46,6 @@ class CIrcleImageView @JvmOverloads  constructor(context: Context, attrs: Attrib
         mPaint.style = Paint.Style.FILL
         canvas.drawCircle(mBitmap!!.width * 0.5f, mBitmap!!.height *0.5f, mBitmap!!.width *0.5f, mPaint)
         mPaint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
-        canvas.drawBitmap(mBitmap, 0f, 0f, mPaint)
+        canvas.drawBitmap(mBitmap!!, 0f, 0f, mPaint)
     }
 }

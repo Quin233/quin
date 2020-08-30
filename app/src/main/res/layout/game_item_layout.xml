@@ -64,7 +64,7 @@
                 android:gravity="center"
                 android:textColor="@color/text_selected_white"
                 android:textSize="12sp"
-                tools:text="收盘价"/>
+                tools:text="进攻"/>
 
             <TextView
                 android:id="@+id/tv_title_right5"
@@ -73,8 +73,7 @@
                 android:gravity="center"
                 android:textColor="@color/text_selected_white"
                 android:textSize="12sp"
-                tools:text="开盘价"/>
-
+                tools:text="防守"/>
             <TextView
                 android:id="@+id/tv_title_right6"
                 android:layout_width="60dp"
@@ -82,8 +81,7 @@
                 android:gravity="center"
                 android:textColor="@color/text_selected_white"
                 android:textSize="12sp"
-                tools:text="买一价"/>
-
+                tools:text="低位A"/>
             <TextView
                 android:id="@+id/tv_title_right7"
                 android:layout_width="60dp"
@@ -91,8 +89,7 @@
                 android:gravity="center"
                 android:textColor="@color/text_selected_white"
                 android:textSize="12sp"
-                tools:text="卖一价"/>
-
+                tools:text="中距离A"/>
             <TextView
                 android:id="@+id/tv_title_right8"
                 android:layout_width="60dp"
@@ -100,7 +97,32 @@
                 android:gravity="center"
                 android:textColor="@color/text_selected_white"
                 android:textSize="12sp"
-                tools:text="量比"/>
+                tools:text="远距离A"/>
+
+            <TextView
+                android:id="@+id/tv_title_right9"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/text_selected_white"
+                android:textSize="12sp"
+                tools:text="低位D"/>
+            <TextView
+                android:id="@+id/tv_title_right10"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/text_selected_white"
+                android:textSize="12sp"
+                tools:text="中距离D"/>
+            <TextView
+                android:id="@+id/tv_title_right11"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/text_selected_white"
+                android:textSize="12sp"
+                tools:text="远距离D"/>
 
         </LinearLayout>
 

@@ -145,7 +145,7 @@ class MusicOfMineActivity : BaseActivity() {
             //获取游标
             val cursor = resolver.query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null, null, null) //创建游标MediaStore.Audio.Media.EXTERNAL_CONTENT_URI获取音频的文件，后面的是关于select筛选条件，这里填土null就可以了
 
-            if (cursor.moveToFirst()){
+            if (cursor!!.moveToFirst()){
                 do {
                     var title =  cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))//歌名
                     var artist =  cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST))//歌唱者

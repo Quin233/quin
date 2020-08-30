@@ -89,13 +89,13 @@ class QuinMediaPlayerService:Service(), MediaPlayer.OnPreparedListener {
      *      START_REDELIVER_INTENT：使用这个返回值时，系统会自动重启该服务，并将Intent的值传入。
      */
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-        var flag = intent.extras.getInt("flag")
+        var flag = intent.extras!!.getInt("flag")
         when(flag){
             QuinMediaPlayerService.FLAG_LOAD_PATH->{
-                playTpe = intent.extras.getInt("playTpe")
-                musicList = intent.extras.getSerializable("musicList") as ArrayList<Music>
-                playMusicIndex = intent.extras.getInt("position")
-                playMode = intent.extras.getInt("mode")
+                playTpe = intent.extras!!.getInt("playTpe")
+                musicList = intent.extras!!.getSerializable("musicList") as ArrayList<Music>
+                playMusicIndex = intent.extras!!.getInt("position")
+                playMode = intent.extras!!.getInt("mode")
                 play(musicList[playMusicIndex])
             }
             QuinMediaPlayerService.FLAG_PLAY->{
@@ -117,7 +117,7 @@ class QuinMediaPlayerService:Service(), MediaPlayer.OnPreparedListener {
                 play(musicList[playMusicIndex])
             }
             QuinMediaPlayerService.FLAG_PROGRESS->{
-                var progress = intent.extras.getInt("progress")
+                var progress = intent.extras!!.getInt("progress")
                 mediaPlayer?.seekTo(progress)
             }
         }

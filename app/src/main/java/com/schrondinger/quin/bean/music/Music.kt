@@ -14,12 +14,12 @@ import android.os.Parcelable
  */
 data class Music (val title:String,val artist:String,val album:String,val length:Int,val albumBip_id:Int,val path:String,val isPlaying:Boolean):Parcelable{
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
+            parcel.readString()!!,
+            parcel.readString()!!,
+            parcel.readString()!!,
             parcel.readInt(),
             parcel.readInt(),
-            parcel.readString(),
+            parcel.readString()!!,
             parcel.readByte() != 0.toByte())
 
     override fun writeToParcel(p0: Parcel?, p1: Int) {

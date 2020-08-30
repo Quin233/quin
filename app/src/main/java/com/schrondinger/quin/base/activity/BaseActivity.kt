@@ -49,7 +49,7 @@ open class BaseActivity : SupportActivity(), BaseFunction, View.OnClickListener 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         if (javaClass.isAnnotationPresent(ActivityInject::class.java)) {
             val annotation = javaClass.getAnnotation(ActivityInject::class.java)
-            if (annotation.rootViewId != -1) {
+            if (annotation!!.rootViewId != -1) {
                 setContentView(annotation.rootViewId)
             } else {
                 throw RuntimeException("rootView is null")

@@ -16,7 +16,7 @@ import io.realm.annotations.RealmClass
  */
 open class NBAer (
         @PrimaryKey
-        var teamId:Int = 1,
+        var teamId:Int = 0,
                  var teamPosition:String="",
                  var cName:String="",
                  var eName:String="",

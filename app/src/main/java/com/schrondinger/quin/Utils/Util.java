@@ -117,4 +117,60 @@ public class Util {
             Glide.with(context).load(imageUrl).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(target);
         }
     }
+
+    /**
+     * NBA获取位置信息
+     */
+    public static String getPosition(int position){
+        String intentPosition;
+        switch (position) {
+            case 0:
+                intentPosition = "SG";
+                break;
+            case 1:
+                intentPosition = "PG";
+                break;
+            case 2:
+                intentPosition = "SF";
+                break;
+            case 3:
+                intentPosition = "PF";
+                break;
+            case 4:
+                intentPosition = "C";
+                break;
+            default:
+                intentPosition = "F" + (position-4);
+                break;
+        }
+        return intentPosition;
+    }
+
+    /**
+     * NBA获取位置信息
+     */
+    public static String getNBACName(int position){
+        String intentName;
+        switch (position){
+            case 0:
+                intentName =  "首发控卫";
+            break;
+            case 1:
+                intentName =  "首发分位";
+            break;
+            case 2:
+                intentName =  "首发小前";
+            break;
+            case 3:
+                intentName =  "首发大前";
+            break;
+            case 4:
+                intentName =  "首发中锋";
+            break;
+            default:
+                intentName =  "替补"+(position-4);
+            break;
+        }
+        return intentName;
+    }
 }

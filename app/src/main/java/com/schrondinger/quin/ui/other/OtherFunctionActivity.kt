@@ -12,6 +12,7 @@ import com.schrondinger.quin.ui.login.LoginActivity
 import com.schrondinger.quin.bean.common.MenuItem
 import com.schrondinger.quin.ui.other.adapter.OtherFunctionAdapter
 import com.schrondinger.quin.ui.other.customview.CustomViewActivity
+import com.schrondinger.quin.ui.other.encryto.EncrytoActivity
 import kotlinx.android.synthetic.main.activity_other_function.*
 import java.text.FieldPosition
 import java.util.ArrayList
@@ -42,7 +43,7 @@ class OtherFunctionActivity : BaseActivity() {
         // 初始化数据源
         allFunctionItems.add(MenuItem(CommItem(0,"类别", ""),false,OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_TITLE.ordinal))
         allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "自定义View", CustomViewActivity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
-        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "查询2", ""), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
+        allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "so库加解密", EncrytoActivity::class.java.name), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
         allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "查询3", ""), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
         allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "查询4", ""), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
         allFunctionItems.add(MenuItem(CommItem(R.drawable.icon_all_fund, "查询5", ""), false, OtherFunctionAdapter.ITEM_TYPE.ITEM_TYPE_MENU.ordinal))
